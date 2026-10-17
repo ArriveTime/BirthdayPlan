@@ -3,102 +3,395 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#16102e">
-<meta name="description" content="Discover birthday freebies, free food, drinks, gifts, casino rewards, nightlife offers and more. Build your free birthday plan at BirthdayPlan.com.">
-<title>BirthdayPlan.com | Your Birthday. Your Freebies. Your Plan.</title>
-<meta property="og:title" content="BirthdayPlan.com — Let Everyone Else Treat You!">
-<meta property="og:description" content="Find birthday freebies, gifts and rewards. Plan your birthday for free.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#180d31">
+<meta name="description" content="Bday0.com helps you find birthday freebies, free food, drinks, beauty gifts, casino rewards, nightlife offers and more. Your Bday. Zero Cost. All Fun!">
+<meta name="keywords" content="birthday freebies, bday freebies, free birthday food, free birthday gifts, birthday rewards, birthday casino offers, birthday nightlife, Bday0">
+<meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://birthdayplan.com/">
+<meta property="og:title" content="Bday0.com | Your Bday. Zero Cost. All Fun!">
+<meta property="og:description" content="Discover birthday freebies, rewards, gifts, food, drinks and entertainment.">
+<meta property="og:url" content="https://bday0.com/">
+<title>Bday0.com | Your Bday. Zero Cost. All Fun!</title>
+
 <style>
 :root{
---navy:#16102e;--purple:#6022a3;--pink:#f43f85;
---gold:#ffd36d;--ink:#28243d;--muted:#6a6678;
---bg:#faf8ff;--line:#e8e2ef
+--dark:#180d31;
+--purple:#6324b0;
+--pink:#f43f85;
+--gold:#ffd36d;
+--text:#29243c;
+--muted:#686376;
+--bg:#faf8ff;
+--line:#e9e1f1;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.55 system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font:16px/1.55 system-ui,-apple-system,Arial,sans-serif;
+}
 button,input,select{font:inherit}
 button{cursor:pointer}
 a{color:var(--purple)}
 .wrap{width:min(1180px,92%);margin:auto}
-header{background:var(--navy);position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #0003}
-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:75px}
-.logo{font-size:clamp(23px,3vw,30px);font-weight:900;letter-spacing:-1px;color:white;text-decoration:none}
+header{
+background:var(--dark);
+position:sticky;
+top:0;
+z-index:30;
+box-shadow:0 4px 20px #0003;
+}
+nav{
+min-height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+.logo{
+font-size:clamp(25px,3vw,32px);
+font-weight:950;
+letter-spacing:-1px;
+color:white;
+text-decoration:none;
+white-space:nowrap;
+}
 .logo span{color:var(--gold)}
-.links{display:flex;gap:20px;flex-wrap:wrap}
-.links a{color:white;text-decoration:none;font-weight:700;font-size:14px}
+.links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+.links a{
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:750;
+}
 .links a:hover{color:var(--gold)}
-.hero{background:linear-gradient(115deg,#16102eef,#53228edc,#b52e76bb),url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85") center/cover;color:white}
-.hero .wrap{padding:85px 0}
-.eyebrow{font-size:13px;letter-spacing:2px;font-weight:800;color:var(--gold)}
-h1{font-size:clamp(39px,6vw,73px);line-height:1.07;letter-spacing:-2px;margin:20px 0}
+.hero{
+background:
+linear-gradient(110deg,#180d31f2,#54218edb,#bb3075b8),
+url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85")
+center/cover;
+color:white;
+}
+.hero .wrap{padding:90px 0}
+.eyebrow{
+font-size:13px;
+letter-spacing:2px;
+font-weight:850;
+color:var(--gold);
+}
+h1{
+font-size:clamp(42px,6vw,76px);
+line-height:1.06;
+letter-spacing:-2px;
+margin:20px 0;
+}
 h1 span{color:var(--gold)}
-.hero p{max-width:750px;font-size:19px;color:#f4eafa}
-.search{background:white;display:flex;gap:8px;padding:9px;border-radius:16px;max-width:900px;margin-top:30px;box-shadow:0 15px 40px #0003}
-.search input,.search select{border:0;padding:14px;min-width:0;background:white;color:var(--ink)}
+.hero p{
+max-width:740px;
+font-size:19px;
+color:#f6ecff;
+}
+.search{
+background:white;
+display:flex;
+gap:8px;
+padding:9px;
+border-radius:16px;
+max-width:900px;
+margin-top:30px;
+box-shadow:0 15px 40px #0003;
+}
+.search input,.search select{
+border:0;
+padding:14px;
+min-width:0;
+background:white;
+color:var(--text);
+}
 .search input{flex:1}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 20px;background:var(--pink);border:0;border-radius:10px;color:white;text-decoration:none;font-weight:800}
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 19px;
+background:var(--pink);
+border:0;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:850;
+text-align:center;
+}
 .btn:hover{filter:brightness(.93)}
 .btn.purple{background:var(--purple)}
-.btn.light{background:white;color:var(--purple);border:1px solid #ded2ee}
+.btn.light{
+background:white;
+color:var(--purple);
+border:1px solid #ded2ee;
+}
 .btn.small{font-size:13px;padding:9px 12px}
-.hero-note{font-size:13px!important;color:white!important}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:-28px;position:relative}
-.stat{background:white;padding:22px;text-align:center;border-radius:15px;box-shadow:0 7px 25px #0001}
-.stat strong{display:block;font-size:26px;color:var(--purple)}
+.hero-note{font-size:13px!important}
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:-28px;
+position:relative;
+}
+.stat{
+background:white;
+padding:22px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 7px 25px #0001;
+}
+.stat strong{
+display:block;
+font-size:26px;
+color:var(--purple);
+}
 .stat span{font-size:13px;color:var(--muted)}
 section{padding:65px 0}
-h2{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-1px;margin:0 0 12px}
+h2{
+font-size:clamp(28px,4vw,40px);
+line-height:1.2;
+letter-spacing:-1px;
+margin:0 0 12px;
+}
 .sub{color:var(--muted);margin:0 0 24px}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}
-.chip{border:1px solid #ded6ea;border-radius:30px;background:white;padding:10px 16px;color:#5b4772;font-weight:750}
-.chip.active{background:var(--purple);border-color:var(--purple);color:white}
-.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:23px}
-.toolbar input,.toolbar select{background:white;border:1px solid #dcd4e8;border-radius:10px;padding:12px}
-.toolbar input{flex:1;min-width:190px}
-.toolbar label{font-size:14px;display:flex;align-items:center;gap:7px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 20px #00000009}
-.photo{height:165px;background:linear-gradient(120deg,#7736ad,#f07aaf);position:relative}
-.photo img{width:100%;height:100%;object-fit:cover}
-.tag{position:absolute;top:12px;left:12px;background:white;border-radius:30px;padding:5px 11px;font-size:12px;font-weight:850;color:var(--purple)}
-.cardbody{padding:19px;display:flex;flex-direction:column;flex:1}
+.chips{
+display:flex;
+flex-wrap:wrap;
+gap:9px;
+margin:24px 0;
+}
+.chip{
+border:1px solid #ded6ea;
+border-radius:30px;
+background:white;
+padding:10px 16px;
+color:#5b4772;
+font-weight:750;
+}
+.chip.active{
+background:var(--purple);
+border-color:var(--purple);
+color:white;
+}
+.toolbar{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+align-items:center;
+margin-bottom:23px;
+}
+.toolbar input,.toolbar select{
+background:white;
+border:1px solid #dcd4e8;
+border-radius:10px;
+padding:12px;
+}
+.toolbar input[type=search]{flex:1;min-width:190px}
+.toolbar label{
+font-size:14px;
+display:flex;
+align-items:center;
+gap:7px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:20px;
+}
+.card{
+background:white;
+border:1px solid var(--line);
+border-radius:17px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+box-shadow:0 5px 20px #00000009;
+}
+.photo{
+height:165px;
+background:linear-gradient(120deg,#7736ad,#f07aaf);
+position:relative;
+}
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.tag{
+position:absolute;
+top:12px;
+left:12px;
+background:white;
+border-radius:30px;
+padding:5px 11px;
+font-size:12px;
+font-weight:850;
+color:var(--purple);
+}
+.cardbody{
+padding:19px;
+display:flex;
+flex-direction:column;
+flex:1;
+}
 .card h3{font-size:21px;margin:0 0 8px}
-.pill{display:inline-block;align-self:flex-start;background:#e9f7ee;color:#17603e;border-radius:30px;font-size:12px;font-weight:800;padding:5px 10px;margin-bottom:12px}
-.pill.conditional{background:#fff0d6;color:#885300}
-.pill.variable{background:#f0e8fc;color:#6324a0}
+.pill{
+display:inline-block;
+align-self:flex-start;
+background:#e9f7ee;
+color:#17603e;
+border-radius:30px;
+font-size:12px;
+font-weight:800;
+padding:5px 10px;
+margin-bottom:12px;
+}
+.pill.conditional{
+background:#fff0d6;
+color:#885300;
+}
+.pill.variable{
+background:#f0e8fc;
+color:#6324a0;
+}
 .reward{font-weight:850;margin-bottom:9px}
-.desc{color:var(--muted);font-size:14px;margin:0 0 13px}
-.rules{font-size:13px;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.desc{
+color:var(--muted);
+font-size:14px;
+margin:0 0 13px;
+}
+.rules{
+font-size:13px;
+border-top:1px solid var(--line);
+padding-top:12px;
+margin-top:auto;
+}
 .actions{display:flex;gap:8px;margin-top:16px}
 .actions a{flex:1}
-.save{border:1px solid #d8c7ea;background:white;border-radius:10px;padding:9px 12px;color:var(--purple);font-weight:800}
-.save[aria-pressed=true]{background:#fce8f1;color:#a9145a}
-.notice{background:#fff8e7;border:1px solid #f1dfa9;border-radius:13px;padding:16px 20px;color:#675029;font-size:14px;margin-bottom:23px}
-.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:26px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.save{
+border:1px solid #d8c7ea;
+background:white;
+border-radius:10px;
+padding:9px 12px;
+color:var(--purple);
+font-weight:800;
+}
+.save[aria-pressed=true]{
+background:#fce8f1;
+color:#a9145a;
+}
+.notice{
+background:#fff8e7;
+border:1px solid #f1dfa9;
+border-radius:13px;
+padding:16px 20px;
+color:#675029;
+font-size:14px;
+margin-bottom:23px;
+}
+.panel{
+background:white;
+border:1px solid var(--line);
+border-radius:18px;
+padding:26px;
+}
+.two{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
 .field{margin-bottom:15px}
-.field label{display:block;font-size:14px;font-weight:800;margin-bottom:6px}
-.field input{width:100%;border:1px solid #dcd4e8;border-radius:10px;padding:12px}
-.planitem{padding:12px;border:1px solid var(--line);border-radius:11px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.planitem small{display:block;color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.step{background:white;border:1px solid var(--line);border-radius:16px;padding:24px}
+.field label{
+display:block;
+font-size:14px;
+font-weight:800;
+margin-bottom:6px;
+}
+.field input{
+width:100%;
+border:1px solid #dcd4e8;
+border-radius:10px;
+padding:12px;
+}
+.planitem{
+padding:12px;
+border:1px solid var(--line);
+border-radius:11px;
+margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+}
+.planitem small{
+display:block;
+color:var(--muted);
+}
+.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+.step{
+background:white;
+border:1px solid var(--line);
+border-radius:16px;
+padding:24px;
+}
 .step b{font-size:28px;color:var(--pink)}
 .step h3{margin:8px 0}
 .step p{color:var(--muted);margin:0}
-.dark{background:linear-gradient(120deg,#16102e,#54238b);color:white}
+.dark{
+background:linear-gradient(120deg,#180d31,#54238b);
+color:white;
+}
 .dark p{color:#e8dcf2}
-footer{background:#111025;color:#d6d1e3;padding:40px 0}
+footer{
+background:#111025;
+color:#d6d1e3;
+padding:40px 0;
+}
 footer a{color:white}
-.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.foot{
+display:flex;
+justify-content:space-between;
+gap:25px;
+flex-wrap:wrap;
+}
 footer small{color:#bbb5cb}
-.empty{background:white;padding:32px;border:1px dashed #cbbce0;border-radius:14px;text-align:center}
+.empty{
+background:white;
+padding:32px;
+border:1px dashed #cbbce0;
+border-radius:14px;
+text-align:center;
+}
 .hidden{display:none!important}
-#toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#24153f;color:white;padding:12px 20px;border-radius:12px;z-index:100;box-shadow:0 10px 30px #0004}
+#toast{
+display:none;
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#24153f;
+color:white;
+padding:12px 20px;
+border-radius:12px;
+z-index:100;
+box-shadow:0 10px 30px #0004;
+}
 #toast.show{display:block}
 @media(max-width:850px){
 .grid{grid-template-columns:repeat(2,1fr)}
@@ -121,14 +414,15 @@ section{padding:46px 0}
 }
 </style>
 </head>
+
 <body>
 
 <header>
 <nav class="wrap">
-<a href="#home" class="logo">Birthday<span>Plan.com</span> 🎉</a>
+<a href="#home" class="logo">Bday<span>0.com</span> 🎉</a>
 <div class="links">
-<a href="#offers">Birthday Freebies</a>
-<a href="#planner">My Plan</a>
+<a href="#offers">Freebies</a>
+<a href="#planner">My Bday Plan</a>
 <a href="#how">How It Works</a>
 <a href="#about">About</a>
 </div>
@@ -139,11 +433,12 @@ section{padding:46px 0}
 
 <div class="hero" id="home">
 <div class="wrap">
-<div class="eyebrow">🎂 YOUR BIRTHDAY DESERVES MORE</div>
-<h1>It's Your Birthday.<br><span>Let Everyone Else Treat You!</span></h1>
-<p>Discover free food, drinks, birthday gifts, casino rewards, entertainment and special offers. Find the deals, check the requirements and plan your perfect birthday.</p>
+<div class="eyebrow">🎂 YOUR BDAY. ZERO COST. ALL FUN.</div>
+<h1>It's Your Bday.<br><span>Let Everyone Else Treat You!</span></h1>
+<p>Free food. Free drinks. Birthday gifts. Casino perks. Nightlife rewards. Discover birthday treats, find the deals and plan your ultimate Bday.</p>
+
 <form id="heroSearch" class="search">
-<input id="heroQuery" placeholder="Search Starbucks, pancakes, beauty, casinos..." aria-label="Search birthday offers">
+<input id="heroQuery" type="search" placeholder="Search coffee, pancakes, beauty, casinos..." aria-label="Search birthday offers">
 <select id="heroCategory" aria-label="Category">
 <option value="all">All Categories</option>
 <option value="Food">Restaurants & Food</option>
@@ -154,36 +449,37 @@ section{padding:46px 0}
 </select>
 <button class="btn" type="submit">Find Freebies →</button>
 </form>
-<p class="hero-note">✓ Free to use &nbsp; ✓ No registration required here &nbsp; ✓ Official business links</p>
+
+<p class="hero-note">✓ Free to use &nbsp; ✓ No registration here &nbsp; ✓ Official business links</p>
 </div>
 </div>
 
 <div class="wrap stats">
-<div class="stat"><strong>100% Free</strong><span>Website access</span></div>
-<div class="stat"><strong>5 Categories</strong><span>Birthday rewards</span></div>
-<div class="stat"><strong>My Plan</strong><span>Save your favorites</span></div>
+<div class="stat"><strong>$0</strong><span>Website access</span></div>
+<div class="stat"><strong>5 Categories</strong><span>Explore birthday perks</span></div>
+<div class="stat"><strong>My Bday</strong><span>Save your favorites</span></div>
 </div>
 
 <section id="offers">
 <div class="wrap">
-<h2>Find Your Birthday Treats 🎁</h2>
-<p class="sub">Explore birthday rewards from restaurants, coffee shops, retailers, entertainment venues and casinos.</p>
+<h2>Find Your Bday Freebies 🎁</h2>
+<p class="sub">Explore birthday treats, gifts, loyalty rewards, entertainment and special offers.</p>
 
 <div class="notice">
-<strong>Before you go:</strong> Offers may require advance enrollment, qualifying purchases, a loyalty account, ID or other conditions. Some listings are programs to check rather than confirmed birthday giveaways. Offers can change or expire. Always verify current terms directly with the business.
+<strong>Heads up!</strong> Some birthday rewards require advance signup, a loyalty account, qualifying purchases or membership status. Some listings are programs to investigate rather than confirmed free giveaways. Always check the official offer before visiting.
 </div>
 
-<div class="chips" id="chips">
+<div class="chips">
 <button class="chip active" data-category="all">🎉 All Offers</button>
 <button class="chip" data-category="Food">🍔 Restaurants</button>
 <button class="chip" data-category="Coffee">☕ Coffee & Drinks</button>
-<button class="chip" data-category="Beauty">🛍️ Shopping & Beauty</button>
+<button class="chip" data-category="Beauty">🛍️ Beauty & Shopping</button>
 <button class="chip" data-category="Entertainment">🎬 Entertainment</button>
 <button class="chip" data-category="Casino">🎰 Casinos & Nightlife</button>
 </div>
 
 <div class="toolbar">
-<input id="filterQuery" placeholder="Search by business, gift or keyword..." aria-label="Filter listings">
+<input id="filterQuery" type="search" placeholder="Search business, gift or keyword..." aria-label="Filter listings">
 <select id="rewardFilter" aria-label="Offer type">
 <option value="all">All Offer Types</option>
 <option value="conditional">Birthday Rewards</option>
@@ -200,17 +496,18 @@ section{padding:46px 0}
 
 <section id="planner" style="background:#f1ecfa">
 <div class="wrap">
-<h2>🎂 My Birthday Freebie Planner</h2>
-<p class="sub">Save your favorite birthday offers, then create your personal birthday checklist.</p>
+<h2>🎂 My Bday0 Planner</h2>
+<p class="sub">Save your favorite birthday offers and create your own birthday checklist.</p>
+
 <div class="two">
 <div class="panel">
-<h3>Plan Your Birthday</h3>
+<h3>Plan Your Bday</h3>
 <div class="field">
 <label for="firstName">Your Name (Optional)</label>
 <input id="firstName" placeholder="Your name">
 </div>
 <div class="field">
-<label for="birthday">Birthday Date (Optional)</label>
+<label for="birthday">Your Birthday (Optional)</label>
 <input id="birthday" type="date">
 </div>
 <div class="field">
@@ -218,10 +515,11 @@ section{padding:46px 0}
 <input id="city" placeholder="Example: Las Vegas, NV">
 </div>
 <button class="btn purple" id="saveDetails">Save My Details</button>
-<p style="font-size:13px;color:#6a6678">Your information is stored only in this browser. Entering a city does not automatically verify local availability.</p>
+<p style="font-size:13px;color:#6a6678">Details stay in this browser. Entering a city does not automatically filter or verify nearby offers.</p>
 </div>
+
 <div class="panel">
-<h3>My Saved Birthday Offers <span id="planCount">(0)</span></h3>
+<h3>My Saved Bday Offers <span id="planCount">(0)</span></h3>
 <div id="planList"></div>
 <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:20px">
 <button class="btn purple small" id="copyPlan">Copy My Plan</button>
@@ -235,23 +533,24 @@ section{padding:46px 0}
 
 <section id="how">
 <div class="wrap">
-<h2>How BirthdayPlan.com Works</h2>
-<p class="sub">Three simple steps to a better birthday.</p>
+<h2>How Bday0.com Works</h2>
+<p class="sub">Your birthday adventure starts here.</p>
+
 <div class="steps">
 <div class="step">
 <b>01</b>
-<h3>Discover 🎁</h3>
-<p>Search birthday rewards and explore restaurants, coffee shops, casinos, entertainment and shopping offers.</p>
+<h3>Find Freebies 🎁</h3>
+<p>Explore restaurants, coffee shops, retailers, casinos, entertainment and birthday reward programs.</p>
 </div>
 <div class="step">
 <b>02</b>
-<h3>Check Requirements 🔎</h3>
-<p>Visit official business websites to confirm eligibility, signup deadlines, participating locations and current terms.</p>
+<h3>Check the Details 🔎</h3>
+<p>Follow official business links and confirm signup requirements, eligibility, deadlines and participating locations.</p>
 </div>
 <div class="step">
 <b>03</b>
-<h3>Plan Your Day 🎉</h3>
-<p>Save offers, create your birthday checklist and print or copy your personalized plan.</p>
+<h3>Make Your Plan 🎉</h3>
+<p>Save your favorite offers, build your birthday checklist and copy or print your personalized plan.</p>
 </div>
 </div>
 </div>
@@ -259,24 +558,24 @@ section{padding:46px 0}
 
 <section class="dark" id="about">
 <div class="wrap">
-<h2>Your Birthday. Your Freebies. Your Plan.</h2>
-<p>BirthdayPlan.com helps people discover birthday rewards, gifts and special experiences without searching dozens of different websites.</p>
-<p>Our goal is simple: make celebrating your birthday easier, more affordable and more fun.</p>
-<p><strong>No membership fees. No account required on BirthdayPlan.com. Just helpful information.</strong></p>
-<a href="#offers" class="btn">Explore Birthday Freebies →</a>
+<h2>One Bday. Tons of Possibilities.</h2>
+<p>Bday0.com helps you discover birthday rewards, gifts and experiences without spending hours searching the internet.</p>
+<p>From coffee and pancakes to beauty gifts, entertainment and casino rewards, we make finding birthday perks simple and fun.</p>
+<p><strong>No membership fees to use Bday0.com. No account required. Just birthday opportunities.</strong></p>
+<a href="#offers" class="btn">Find My Freebies →</a>
 </div>
 </section>
 
-<section>
+<section id="legal">
 <div class="wrap">
-<h2>Important Information</h2>
+<h2>The Fine Print</h2>
 <div class="panel" style="font-size:14px;color:#666">
-<p><strong>Independent Website:</strong> BirthdayPlan.com is an independent informational resource. It is not affiliated with, sponsored by or endorsed by the businesses listed unless expressly stated.</p>
-<p><strong>Offer Availability:</strong> Promotions are subject to change without notice. Availability, dates, age requirements, location restrictions, membership tiers, purchase conditions and other rules may apply. A listing does not guarantee that a free item or reward will be provided.</p>
-<p><strong>Casino and Nightlife Offers:</strong> Gambling and alcohol-related promotions may be restricted by age, location, membership and applicable laws. Casino rewards may require qualifying play or tier status. BirthdayPlan.com does not provide gambling services or sell alcohol.</p>
-<p><strong>External Links:</strong> Business websites are independently operated. We are not responsible for their content, offers, privacy practices or services.</p>
-<p><strong>Privacy:</strong> This version does not require an account or transmit your planner details to BirthdayPlan.com. Saved offers and optional personal details are stored locally in your browser. External websites and image providers may process technical information when accessed.</p>
-<p><strong>Accuracy:</strong> The directory is an informational starter collection and is not automatically updated or independently verified in real time. Confirm every offer directly with the provider before making travel or purchase decisions.</p>
+<p><strong>Independent Website:</strong> Bday0.com is an independent informational website. We are not affiliated with, endorsed by or sponsored by the businesses listed unless expressly stated.</p>
+<p><strong>Promotions:</strong> Offers can change, expire or be discontinued without notice. Eligibility, purchase requirements, participating locations, age restrictions, enrollment deadlines and membership conditions may apply. A listing does not guarantee a free product or service.</p>
+<p><strong>Casinos and Nightlife:</strong> Casino and alcohol-related promotions may have legal age restrictions, membership requirements and geographic limitations. Casino benefits may depend on qualifying play or membership tier. Bday0.com does not operate gambling services or sell alcohol.</p>
+<p><strong>External Websites:</strong> All third-party websites are independently operated. Bday0.com is not responsible for their offers, policies, products or services.</p>
+<p><strong>Privacy:</strong> This version does not require user accounts. Optional planner details and saved offers remain in local browser storage and are not submitted to Bday0.com. External websites and image providers may receive technical connection data.</p>
+<p><strong>Accuracy:</strong> Listings are an informational starter directory, not a continuously verified or automatically updated database. Confirm current promotions directly with each business before traveling or spending money.</p>
 </div>
 </div>
 </section>
@@ -286,12 +585,12 @@ section{padding:46px 0}
 <footer>
 <div class="wrap foot">
 <div>
-<a href="#home" class="logo">Birthday<span>Plan.com</span> 🎉</a>
-<p>Your Birthday. Your Freebies. Your Plan.</p>
-<small>© <span id="year"></span> BirthdayPlan.com. All rights reserved.</small>
+<a href="#home" class="logo">Bday<span>0.com</span> 🎉</a>
+<p>Your Bday. Your Freebies. Zero Cost. All Fun!</p>
+<small>© <span id="year"></span> Bday0.com. All rights reserved.</small>
 </div>
 <div>
-<p><a href="#offers">Explore Offers</a> &nbsp; | &nbsp; <a href="#planner">My Birthday Plan</a></p>
+<p><a href="#offers">Find Freebies</a> &nbsp; | &nbsp; <a href="#planner">My Bday Plan</a></p>
 <small>Independent informational website. Promotions subject to change.</small>
 </div>
 </div>
@@ -310,7 +609,7 @@ desc:"Eligible Starbucks Rewards members may receive a complimentary birthday it
 rules:"Advance enrollment, qualifying activity and redemption restrictions apply.",
 url:"https://www.starbucks.com/rewards",
 img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
-tags:"coffee drinks latte frappuccino"
+tags:"coffee latte frappuccino drink"
 },
 {
 id:"ihop",name:"IHOP Rewards",cat:"Food",type:"conditional",
@@ -323,7 +622,7 @@ tags:"pancakes breakfast restaurant"
 },
 {
 id:"dennys",name:"Denny's",cat:"Food",type:"variable",
-reward:"Check current birthday breakfast offers",
+reward:"Check birthday breakfast offers",
 desc:"Explore any available birthday benefits through Denny's rewards programs.",
 rules:"Offers vary. Do not assume a free meal is available without confirmation.",
 url:"https://www.dennys.com/",
@@ -346,13 +645,13 @@ desc:"Explore birthday offers associated with Baskin-Robbins rewards.",
 rules:"Participation, account eligibility and reward details may vary.",
 url:"https://www.baskinrobbins.com/",
 img:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
-tags:"ice cream birthday dessert"
+tags:"ice cream dessert"
 },
 {
 id:"jersey",name:"Jersey Mike's",cat:"Food",type:"conditional",
 reward:"Birthday sandwich reward",
 desc:"Eligible loyalty members may receive birthday-related rewards.",
-rules:"Check current MyMike's and Shore Points eligibility, qualifying activity and redemption terms.",
+rules:"Check MyMike's and Shore Points eligibility, qualifying activity and redemption terms.",
 url:"https://www.jerseymikes.com/",
 img:"https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=800&q=80",
 tags:"sandwich sub lunch"
@@ -378,7 +677,7 @@ tags:"wings sports restaurant"
 {
 id:"panera",name:"MyPanera",cat:"Food",type:"variable",
 reward:"Personalized birthday surprise",
-desc:"MyPanera may provide personalized rewards that can include birthday offers.",
+desc:"MyPanera may provide personalized rewards that include birthday offers.",
 rules:"Not all members receive the same reward. Check your account.",
 url:"https://www.panerabread.com/en-us/mypanera.html",
 img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
@@ -486,8 +785,7 @@ tags:"nightclubs nightlife vip birthday"
 ];
 
 const $=id=>document.getElementById(id);
-const storageKey="birthdayplan_saved_v1";
-
+const storageKey="bday0_saved_v1";
 let saved=new Set();
 let details={};
 let active="all";
@@ -532,7 +830,6 @@ return btn;
 
 function createCard(o){
 const card=element("article","card");
-
 const photo=element("div","photo");
 const img=element("img");
 img.src=o.img;
@@ -575,7 +872,7 @@ saved.add(o.id);
 }
 persist();
 render();
-toast(saved.has(o.id)?"Added to your plan":"Removed from your plan");
+toast(saved.has(o.id)?"Added to your Bday plan":"Removed from your Bday plan");
 }
 );
 saveBtn.setAttribute("aria-pressed",saved.has(o.id));
@@ -649,7 +946,7 @@ const name=$("firstName").value.trim()||"My";
 const birthday=$("birthday").value;
 const city=$("city").value.trim();
 
-let text=name+"'s Birthday Plan\n";
+let text=name+"'s Bday0 Plan\n";
 if(birthday)text+="Birthday: "+birthday+"\n";
 if(city)text+="City/ZIP: "+city+"\n";
 text+="\n";
@@ -661,7 +958,8 @@ text+="Requirements: "+o.rules+"\n";
 text+="Official Website: "+o.url+"\n\n";
 });
 
-text+="Always verify current offers and requirements before visiting.";
+text+="Always verify current offers and requirements before visiting.\n";
+text+="Created with Bday0.com";
 return text;
 }
 
@@ -701,12 +999,12 @@ $("offers").scrollIntoView({behavior:"smooth"});
 
 $("copyPlan").addEventListener("click",async()=>{
 if(!saved.size){
-toast("Save some birthday offers first.");
+toast("Save some Bday offers first.");
 return;
 }
 try{
 await navigator.clipboard.writeText(planText());
-toast("Your birthday plan was copied.");
+toast("Your Bday plan was copied.");
 }catch(e){
 toast("Copy unavailable. Try Print My Plan.");
 }
@@ -714,7 +1012,7 @@ toast("Copy unavailable. Try Print My Plan.");
 
 $("clearPlan").addEventListener("click",()=>{
 if(!saved.size)return;
-if(confirm("Remove all saved birthday offers?")){
+if(confirm("Remove all saved Bday offers?")){
 saved.clear();
 persist();
 render();
@@ -724,7 +1022,7 @@ toast("Your saved offers were cleared.");
 
 $("printPlan").addEventListener("click",()=>{
 if(!saved.size){
-toast("Save some birthday offers first.");
+toast("Save some Bday offers first.");
 return;
 }
 const w=window.open("","_blank");
@@ -735,7 +1033,7 @@ return;
 const pre=w.document.createElement("pre");
 pre.style.cssText="white-space:pre-wrap;font:16px/1.6 Arial,sans-serif;margin:35px";
 pre.textContent=planText();
-w.document.title="My Birthday Plan";
+w.document.title="My Bday0 Plan";
 w.document.body.append(pre);
 w.focus();
 w.print();
