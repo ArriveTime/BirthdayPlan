@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#16102e">
+<meta name="description" content="Discover birthday freebies, free food, drinks, gifts, casino rewards, nightlife offers and more. Build your free birthday plan at BirthdayPlan.com.">
+<title>BirthdayPlan.com | Your Birthday. Your Freebies. Your Plan.</title>
+<meta property="og:title" content="BirthdayPlan.com — Let Everyone Else Treat You!">
+<meta property="og:description" content="Find birthday freebies, gifts and rewards. Plan your birthday for free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://birthdayplan.com/">
+<style>
+:root{
+--navy:#16102e;--purple:#6022a3;--pink:#f43f85;
+--gold:#ffd36d;--ink:#28243d;--muted:#6a6678;
+--bg:#faf8ff;--line:#e8e2ef
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{color:var(--purple)}
+.wrap{width:min(1180px,92%);margin:auto}
+header{background:var(--navy);position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #0003}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:75px}
+.logo{font-size:clamp(23px,3vw,30px);font-weight:900;letter-spacing:-1px;color:white;text-decoration:none}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+.links a{color:white;text-decoration:none;font-weight:700;font-size:14px}
+.links a:hover{color:var(--gold)}
+.hero{background:linear-gradient(115deg,#16102eef,#53228edc,#b52e76bb),url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85") center/cover;color:white}
+.hero .wrap{padding:85px 0}
+.eyebrow{font-size:13px;letter-spacing:2px;font-weight:800;color:var(--gold)}
+h1{font-size:clamp(39px,6vw,73px);line-height:1.07;letter-spacing:-2px;margin:20px 0}
+h1 span{color:var(--gold)}
+.hero p{max-width:750px;font-size:19px;color:#f4eafa}
+.search{background:white;display:flex;gap:8px;padding:9px;border-radius:16px;max-width:900px;margin-top:30px;box-shadow:0 15px 40px #0003}
+.search input,.search select{border:0;padding:14px;min-width:0;background:white;color:var(--ink)}
+.search input{flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 20px;background:var(--pink);border:0;border-radius:10px;color:white;text-decoration:none;font-weight:800}
+.btn:hover{filter:brightness(.93)}
+.btn.purple{background:var(--purple)}
+.btn.light{background:white;color:var(--purple);border:1px solid #ded2ee}
+.btn.small{font-size:13px;padding:9px 12px}
+.hero-note{font-size:13px!important;color:white!important}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:-28px;position:relative}
+.stat{background:white;padding:22px;text-align:center;border-radius:15px;box-shadow:0 7px 25px #0001}
+.stat strong{display:block;font-size:26px;color:var(--purple)}
+.stat span{font-size:13px;color:var(--muted)}
+section{padding:65px 0}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-1px;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}
+.chip{border:1px solid #ded6ea;border-radius:30px;background:white;padding:10px 16px;color:#5b4772;font-weight:750}
+.chip.active{background:var(--purple);border-color:var(--purple);color:white}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:23px}
+.toolbar input,.toolbar select{background:white;border:1px solid #dcd4e8;border-radius:10px;padding:12px}
+.toolbar input{flex:1;min-width:190px}
+.toolbar label{font-size:14px;display:flex;align-items:center;gap:7px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 20px #00000009}
+.photo{height:165px;background:linear-gradient(120deg,#7736ad,#f07aaf);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:12px;left:12px;background:white;border-radius:30px;padding:5px 11px;font-size:12px;font-weight:850;color:var(--purple)}
+.cardbody{padding:19px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:21px;margin:0 0 8px}
+.pill{display:inline-block;align-self:flex-start;background:#e9f7ee;color:#17603e;border-radius:30px;font-size:12px;font-weight:800;padding:5px 10px;margin-bottom:12px}
+.pill.conditional{background:#fff0d6;color:#885300}
+.pill.variable{background:#f0e8fc;color:#6324a0}
+.reward{font-weight:850;margin-bottom:9px}
+.desc{color:var(--muted);font-size:14px;margin:0 0 13px}
+.rules{font-size:13px;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.actions{display:flex;gap:8px;margin-top:16px}
+.actions a{flex:1}
+.save{border:1px solid #d8c7ea;background:white;border-radius:10px;padding:9px 12px;color:var(--purple);font-weight:800}
+.save[aria-pressed=true]{background:#fce8f1;color:#a9145a}
+.notice{background:#fff8e7;border:1px solid #f1dfa9;border-radius:13px;padding:16px 20px;color:#675029;font-size:14px;margin-bottom:23px}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:14px;font-weight:800;margin-bottom:6px}
+.field input{width:100%;border:1px solid #dcd4e8;border-radius:10px;padding:12px}
+.planitem{padding:12px;border:1px solid var(--line);border-radius:11px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.planitem small{display:block;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:white;border:1px solid var(--line);border-radius:16px;padding:24px}
+.step b{font-size:28px;color:var(--pink)}
+.step h3{margin:8px 0}
+.step p{color:var(--muted);margin:0}
+.dark{background:linear-gradient(120deg,#16102e,#54238b);color:white}
+.dark p{color:#e8dcf2}
+footer{background:#111025;color:#d6d1e3;padding:40px 0}
+footer a{color:white}
+.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+footer small{color:#bbb5cb}
+.empty{background:white;padding:32px;border:1px dashed #cbbce0;border-radius:14px;text-align:center}
+.hidden{display:none!important}
+#toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#24153f;color:white;padding:12px 20px;border-radius:12px;z-index:100;box-shadow:0 10px 30px #0004}
+#toast.show{display:block}
+@media(max-width:850px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.two{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+nav{flex-direction:column;padding:12px 0;gap:8px}
+.links{gap:12px;justify-content:center}
+.links a{font-size:12px}
+.hero .wrap{padding:65px 0}
+.search{flex-direction:column}
+.search select{border:1px solid var(--line)}
+.grid,.steps{grid-template-columns:1fr}
+.stats{gap:7px}
+.stat{padding:14px 6px}
+.stat strong{font-size:19px}
+.stat span{font-size:11px}
+section{padding:46px 0}
+.panel{padding:19px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="wrap">
+<a href="#home" class="logo">Birthday<span>Plan.com</span> 🎉</a>
+<div class="links">
+<a href="#offers">Birthday Freebies</a>
+<a href="#planner">My Plan</a>
+<a href="#how">How It Works</a>
+<a href="#about">About</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+<div class="wrap">
+<div class="eyebrow">🎂 YOUR BIRTHDAY DESERVES MORE</div>
+<h1>It's Your Birthday.<br><span>Let Everyone Else Treat You!</span></h1>
+<p>Discover free food, drinks, birthday gifts, casino rewards, entertainment and special offers. Find the deals, check the requirements and plan your perfect birthday.</p>
+<form id="heroSearch" class="search">
+<input id="heroQuery" placeholder="Search Starbucks, pancakes, beauty, casinos..." aria-label="Search birthday offers">
+<select id="heroCategory" aria-label="Category">
+<option value="all">All Categories</option>
+<option value="Food">Restaurants & Food</option>
+<option value="Coffee">Coffee & Drinks</option>
+<option value="Beauty">Beauty & Shopping</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Casino">Casinos & Nightlife</option>
+</select>
+<button class="btn" type="submit">Find Freebies →</button>
+</form>
+<p class="hero-note">✓ Free to use &nbsp; ✓ No registration required here &nbsp; ✓ Official business links</p>
+</div>
+</div>
+
+<div class="wrap stats">
+<div class="stat"><strong>100% Free</strong><span>Website access</span></div>
+<div class="stat"><strong>5 Categories</strong><span>Birthday rewards</span></div>
+<div class="stat"><strong>My Plan</strong><span>Save your favorites</span></div>
+</div>
+
+<section id="offers">
+<div class="wrap">
+<h2>Find Your Birthday Treats 🎁</h2>
+<p class="sub">Explore birthday rewards from restaurants, coffee shops, retailers, entertainment venues and casinos.</p>
+
+<div class="notice">
+<strong>Before you go:</strong> Offers may require advance enrollment, qualifying purchases, a loyalty account, ID or other conditions. Some listings are programs to check rather than confirmed birthday giveaways. Offers can change or expire. Always verify current terms directly with the business.
+</div>
+
+<div class="chips" id="chips">
+<button class="chip active" data-category="all">🎉 All Offers</button>
+<button class="chip" data-category="Food">🍔 Restaurants</button>
+<button class="chip" data-category="Coffee">☕ Coffee & Drinks</button>
+<button class="chip" data-category="Beauty">🛍️ Shopping & Beauty</button>
+<button class="chip" data-category="Entertainment">🎬 Entertainment</button>
+<button class="chip" data-category="Casino">🎰 Casinos & Nightlife</button>
+</div>
+
+<div class="toolbar">
+<input id="filterQuery" placeholder="Search by business, gift or keyword..." aria-label="Filter listings">
+<select id="rewardFilter" aria-label="Offer type">
+<option value="all">All Offer Types</option>
+<option value="conditional">Birthday Rewards</option>
+<option value="variable">Check Current Offers</option>
+</select>
+<label><input id="savedOnly" type="checkbox"> Saved Only</label>
+<span id="resultCount" style="font-size:13px;color:#666"></span>
+</div>
+
+<div class="grid" id="cards"></div>
+<div id="noResults" class="empty hidden">No matching offers found. Try a different search or category.</div>
+</div>
+</section>
+
+<section id="planner" style="background:#f1ecfa">
+<div class="wrap">
+<h2>🎂 My Birthday Freebie Planner</h2>
+<p class="sub">Save your favorite birthday offers, then create your personal birthday checklist.</p>
+<div class="two">
+<div class="panel">
+<h3>Plan Your Birthday</h3>
+<div class="field">
+<label for="firstName">Your Name (Optional)</label>
+<input id="firstName" placeholder="Your name">
+</div>
+<div class="field">
+<label for="birthday">Birthday Date (Optional)</label>
+<input id="birthday" type="date">
+</div>
+<div class="field">
+<label for="city">Your City or ZIP Code (Optional)</label>
+<input id="city" placeholder="Example: Las Vegas, NV">
+</div>
+<button class="btn purple" id="saveDetails">Save My Details</button>
+<p style="font-size:13px;color:#6a6678">Your information is stored only in this browser. Entering a city does not automatically verify local availability.</p>
+</div>
+<div class="panel">
+<h3>My Saved Birthday Offers <span id="planCount">(0)</span></h3>
+<div id="planList"></div>
+<div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:20px">
+<button class="btn purple small" id="copyPlan">Copy My Plan</button>
+<button class="btn small" id="printPlan">Print My Plan</button>
+<button class="btn light small" id="clearPlan">Clear Saved</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how">
+<div class="wrap">
+<h2>How BirthdayPlan.com Works</h2>
+<p class="sub">Three simple steps to a better birthday.</p>
+<div class="steps">
+<div class="step">
+<b>01</b>
+<h3>Discover 🎁</h3>
+<p>Search birthday rewards and explore restaurants, coffee shops, casinos, entertainment and shopping offers.</p>
+</div>
+<div class="step">
+<b>02</b>
+<h3>Check Requirements 🔎</h3>
+<p>Visit official business websites to confirm eligibility, signup deadlines, participating locations and current terms.</p>
+</div>
+<div class="step">
+<b>03</b>
+<h3>Plan Your Day 🎉</h3>
+<p>Save offers, create your birthday checklist and print or copy your personalized plan.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="dark" id="about">
+<div class="wrap">
+<h2>Your Birthday. Your Freebies. Your Plan.</h2>
+<p>BirthdayPlan.com helps people discover birthday rewards, gifts and special experiences without searching dozens of different websites.</p>
+<p>Our goal is simple: make celebrating your birthday easier, more affordable and more fun.</p>
+<p><strong>No membership fees. No account required on BirthdayPlan.com. Just helpful information.</strong></p>
+<a href="#offers" class="btn">Explore Birthday Freebies →</a>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Important Information</h2>
+<div class="panel" style="font-size:14px;color:#666">
+<p><strong>Independent Website:</strong> BirthdayPlan.com is an independent informational resource. It is not affiliated with, sponsored by or endorsed by the businesses listed unless expressly stated.</p>
+<p><strong>Offer Availability:</strong> Promotions are subject to change without notice. Availability, dates, age requirements, location restrictions, membership tiers, purchase conditions and other rules may apply. A listing does not guarantee that a free item or reward will be provided.</p>
+<p><strong>Casino and Nightlife Offers:</strong> Gambling and alcohol-related promotions may be restricted by age, location, membership and applicable laws. Casino rewards may require qualifying play or tier status. BirthdayPlan.com does not provide gambling services or sell alcohol.</p>
+<p><strong>External Links:</strong> Business websites are independently operated. We are not responsible for their content, offers, privacy practices or services.</p>
+<p><strong>Privacy:</strong> This version does not require an account or transmit your planner details to BirthdayPlan.com. Saved offers and optional personal details are stored locally in your browser. External websites and image providers may process technical information when accessed.</p>
+<p><strong>Accuracy:</strong> The directory is an informational starter collection and is not automatically updated or independently verified in real time. Confirm every offer directly with the provider before making travel or purchase decisions.</p>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap foot">
+<div>
+<a href="#home" class="logo">Birthday<span>Plan.com</span> 🎉</a>
+<p>Your Birthday. Your Freebies. Your Plan.</p>
+<small>© <span id="year"></span> BirthdayPlan.com. All rights reserved.</small>
+</div>
+<div>
+<p><a href="#offers">Explore Offers</a> &nbsp; | &nbsp; <a href="#planner">My Birthday Plan</a></p>
+<small>Independent informational website. Promotions subject to change.</small>
+</div>
+</div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+
+const offers=[
+{
+id:"starbucks",name:"Starbucks Rewards",cat:"Coffee",type:"conditional",
+reward:"Birthday drink or food reward",
+desc:"Eligible Starbucks Rewards members may receive a complimentary birthday item.",
+rules:"Advance enrollment, qualifying activity and redemption restrictions apply.",
+url:"https://www.starbucks.com/rewards",
+img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+tags:"coffee drinks latte frappuccino"
+},
+{
+id:"ihop",name:"IHOP Rewards",cat:"Food",type:"conditional",
+reward:"Birthday pancakes reward",
+desc:"IHOP offers birthday-related rewards through its loyalty program.",
+rules:"Membership, participating locations and current reward terms apply.",
+url:"https://www.ihop.com/en/rewards",
+img:"https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80",
+tags:"pancakes breakfast restaurant"
+},
+{
+id:"dennys",name:"Denny's",cat:"Food",type:"variable",
+reward:"Check current birthday breakfast offers",
+desc:"Explore any available birthday benefits through Denny's rewards programs.",
+rules:"Offers vary. Do not assume a free meal is available without confirmation.",
+url:"https://www.dennys.com/",
+img:"https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80",
+tags:"breakfast diner pancakes"
+},
+{
+id:"krispy",name:"Krispy Kreme",cat:"Food",type:"conditional",
+reward:"Birthday doughnut rewards",
+desc:"Birthday-related treats may be available through Krispy Kreme Rewards.",
+rules:"App or membership and current offer terms apply.",
+url:"https://www.krispykreme.com/",
+img:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
+tags:"donuts doughnuts sweets dessert"
+},
+{
+id:"baskin",name:"Baskin-Robbins",cat:"Food",type:"conditional",
+reward:"Birthday ice cream benefits",
+desc:"Explore birthday offers associated with Baskin-Robbins rewards.",
+rules:"Participation, account eligibility and reward details may vary.",
+url:"https://www.baskinrobbins.com/",
+img:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
+tags:"ice cream birthday dessert"
+},
+{
+id:"jersey",name:"Jersey Mike's",cat:"Food",type:"conditional",
+reward:"Birthday sandwich reward",
+desc:"Eligible loyalty members may receive birthday-related rewards.",
+rules:"Check current MyMike's and Shore Points eligibility, qualifying activity and redemption terms.",
+url:"https://www.jerseymikes.com/",
+img:"https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=800&q=80",
+tags:"sandwich sub lunch"
+},
+{
+id:"chick",name:"Chick-fil-A One",cat:"Food",type:"conditional",
+reward:"Birthday reward based on membership",
+desc:"Eligible Chick-fil-A One members may receive birthday benefits.",
+rules:"Reward availability and selection depend on membership tier and program terms.",
+url:"https://www.chick-fil-a.com/one",
+img:"https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
+tags:"chicken sandwich restaurant"
+},
+{
+id:"buffalo",name:"Buffalo Wild Wings",cat:"Food",type:"conditional",
+reward:"Birthday wings or rewards",
+desc:"Explore birthday benefits associated with Buffalo Wild Wings rewards.",
+rules:"Enrollment, location and current redemption rules apply.",
+url:"https://www.buffalowildwings.com/",
+img:"https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
+tags:"wings sports restaurant"
+},
+{
+id:"panera",name:"MyPanera",cat:"Food",type:"variable",
+reward:"Personalized birthday surprise",
+desc:"MyPanera may provide personalized rewards that can include birthday offers.",
+rules:"Not all members receive the same reward. Check your account.",
+url:"https://www.panerabread.com/en-us/mypanera.html",
+img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
+tags:"bakery bread cafe"
+},
+{
+id:"benjerry",name:"Ben & Jerry's",cat:"Food",type:"variable",
+reward:"Check birthday ice cream promotions",
+desc:"Explore current offers and participating Scoop Shop promotions.",
+rules:"No nationwide birthday giveaway is guaranteed.",
+url:"https://www.benjerry.com/",
+img:"https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=800&q=80",
+tags:"ice cream scoop dessert"
+},
+{
+id:"dutch",name:"Dutch Bros Rewards",cat:"Coffee",type:"conditional",
+reward:"Birthday drink benefit",
+desc:"Dutch Bros has offered birthday drink rewards through its app.",
+rules:"App account, enrollment and redemption requirements apply.",
+url:"https://www.dutchbros.com/",
+img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+tags:"coffee drinks beverage"
+},
+{
+id:"dunkin",name:"Dunkin' Rewards",cat:"Coffee",type:"variable",
+reward:"Check birthday loyalty benefits",
+desc:"Explore current birthday-related Dunkin' Rewards offers.",
+rules:"Do not assume a complimentary birthday drink; benefits may change.",
+url:"https://www.dunkindonuts.com/en/dunkinrewards",
+img:"https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80",
+tags:"coffee donuts breakfast"
+},
+{
+id:"sephora",name:"Sephora Beauty Insider",cat:"Beauty",type:"conditional",
+reward:"Birthday beauty gift",
+desc:"Eligible Beauty Insider members can choose from birthday gift options.",
+rules:"Membership, gift availability and in-store versus online redemption terms apply.",
+url:"https://www.sephora.com/profile/BeautyInsider",
+img:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
+tags:"makeup cosmetics skincare beauty"
+},
+{
+id:"ulta",name:"Ulta Beauty Rewards",cat:"Beauty",type:"conditional",
+reward:"Birthday beauty gift and member offers",
+desc:"Ulta's loyalty program offers birthday-related beauty rewards.",
+rules:"Account, birthday registration, availability and redemption conditions apply.",
+url:"https://www.ulta.com/rewards",
+img:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+tags:"makeup skincare beauty shopping"
+},
+{
+id:"amc",name:"AMC Stubs",cat:"Entertainment",type:"conditional",
+reward:"Birthday concession benefit",
+desc:"Certain AMC Stubs membership levels include birthday concessions.",
+rules:"Membership tier, participating theater and current terms apply.",
+url:"https://www.amctheatres.com/amcstubs",
+img:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
+tags:"movies cinema popcorn"
+},
+{
+id:"regal",name:"Regal Crown Club",cat:"Entertainment",type:"variable",
+reward:"Check birthday movie perks",
+desc:"Explore current birthday benefits for eligible Regal members.",
+rules:"Membership tier and program terms determine availability.",
+url:"https://www.regmovies.com/",
+img:"https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=800&q=80",
+tags:"movies cinema popcorn"
+},
+{
+id:"wynn",name:"Wynn Rewards — Las Vegas",cat:"Casino",type:"variable",
+reward:"Possible birthday casino benefits",
+desc:"Certain Wynn Rewards tiers may include birthday dining or gaming benefits.",
+rules:"Not a universal free gift. Tier, rated play and current rules apply.",
+url:"https://www.wynnlasvegas.com/wynn-rewards",
+img:"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=800&q=80",
+tags:"casino vegas las vegas resort"
+},
+{
+id:"mgm",name:"MGM Rewards",cat:"Casino",type:"variable",
+reward:"Check member birthday promotions",
+desc:"Explore birthday-specific offers available to qualifying MGM Rewards members.",
+rules:"No birthday reward is promised. Property, tier and promotional terms vary.",
+url:"https://www.mgmresorts.com/en/mgm-rewards.html",
+img:"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=800&q=80",
+tags:"casino las vegas resort"
+},
+{
+id:"caesars",name:"Caesars Rewards",cat:"Casino",type:"variable",
+reward:"Check property-specific birthday perks",
+desc:"Ask participating Caesars properties about current birthday promotions.",
+rules:"No universal birthday benefit is claimed. Verify eligibility directly.",
+url:"https://www.caesars.com/myrewards",
+img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+tags:"casino las vegas nightlife"
+},
+{
+id:"nightlife",name:"Local Nightclubs & Birthday Hosts",cat:"Casino",type:"variable",
+reward:"Check birthday guest-list and VIP offers",
+desc:"Some nightclubs offer birthday guest-list privileges or promotional packages.",
+rules:"No specific free admission, drinks or VIP package is guaranteed. Age and dress-code restrictions may apply.",
+url:"https://www.google.com/maps/search/nightclubs/",
+img:"https://images.unsplash.com/photo-1571266028243-d220c9a3a157?auto=format&fit=crop&w=800&q=80",
+tags:"nightclubs nightlife vip birthday"
+}
+];
+
+const $=id=>document.getElementById(id);
+const storageKey="birthdayplan_saved_v1";
+
+let saved=new Set();
+let details={};
+let active="all";
+
+try{
+const old=JSON.parse(localStorage.getItem(storageKey)||"{}");
+saved=new Set((old.saved||[]).filter(id=>offers.some(o=>o.id===id)));
+details=old.details||{};
+}catch(e){}
+
+function persist(){
+try{
+localStorage.setItem(storageKey,JSON.stringify({
+saved:[...saved],details
+}));
+}catch(e){
+toast("Browser storage is unavailable.");
+}
+}
+
+function toast(message){
+const el=$("toast");
+el.textContent=message;
+el.classList.add("show");
+clearTimeout(toast.timer);
+toast.timer=setTimeout(()=>el.classList.remove("show"),3000);
+}
+
+function element(tag,className,text){
+const el=document.createElement(tag);
+if(className)el.className=className;
+if(text!==undefined)el.textContent=text;
+return el;
+}
+
+function makeButton(text,className,action){
+const btn=element("button",className,text);
+btn.type="button";
+btn.addEventListener("click",action);
+return btn;
+}
+
+function createCard(o){
+const card=element("article","card");
+
+const photo=element("div","photo");
+const img=element("img");
+img.src=o.img;
+img.alt="Illustrative photograph for "+o.cat;
+img.loading="lazy";
+img.onerror=()=>img.style.display="none";
+photo.append(img,element("span","tag",o.cat));
+card.append(photo);
+
+const body=element("div","cardbody");
+body.append(element("h3","",o.name));
+
+const pillText=o.type==="conditional"?"Conditions Apply":"Check Current Offer";
+body.append(element("span","pill "+o.type,pillText));
+body.append(element("div","reward",o.reward));
+body.append(element("p","desc",o.desc));
+
+const rules=element("div","rules");
+rules.append(
+element("strong","","Before you go: "),
+document.createTextNode(o.rules)
+);
+body.append(rules);
+
+const actions=element("div","actions");
+const link=element("a","btn purple small","Official Website ↗");
+link.href=o.url;
+link.target="_blank";
+link.rel="noopener noreferrer";
+actions.append(link);
+
+const saveBtn=makeButton(
+saved.has(o.id)?"♥ Saved":"♡ Save",
+"save",
+()=>{
+if(saved.has(o.id)){
+saved.delete(o.id);
+}else{
+saved.add(o.id);
+}
+persist();
+render();
+toast(saved.has(o.id)?"Added to your plan":"Removed from your plan");
+}
+);
+saveBtn.setAttribute("aria-pressed",saved.has(o.id));
+saveBtn.setAttribute("aria-label","Save or remove "+o.name);
+actions.append(saveBtn);
+
+body.append(actions);
+card.append(body);
+return card;
+}
+
+function filteredOffers(){
+const q=$("filterQuery").value.trim().toLowerCase();
+const type=$("rewardFilter").value;
+
+return offers.filter(o=>{
+const categoryMatch=active==="all"||o.cat===active;
+const text=(o.name+" "+o.reward+" "+o.desc+" "+o.tags+" "+o.cat).toLowerCase();
+const searchMatch=!q||text.includes(q);
+const typeMatch=type==="all"||o.type===type;
+const savedMatch=!$("savedOnly").checked||saved.has(o.id);
+return categoryMatch&&searchMatch&&typeMatch&&savedMatch;
+});
+}
+
+function render(){
+const results=filteredOffers();
+$("cards").replaceChildren(...results.map(createCard));
+$("noResults").classList.toggle("hidden",results.length>0);
+$("resultCount").textContent=results.length+" listings";
+
+document.querySelectorAll(".chip").forEach(btn=>{
+const selected=btn.dataset.category===active;
+btn.classList.toggle("active",selected);
+btn.setAttribute("aria-pressed",selected);
+});
+
+renderPlan();
+}
+
+function renderPlan(){
+const selected=offers.filter(o=>saved.has(o.id));
+$("planCount").textContent="("+selected.length+")";
+const list=$("planList");
+list.replaceChildren();
+
+if(!selected.length){
+list.append(element("p","sub","No saved offers yet. Browse the listings and tap ♡ Save."));
+return;
+}
+
+selected.forEach(o=>{
+const item=element("div","planitem");
+const info=element("div");
+info.append(
+element("strong","",o.name),
+element("small","",o.reward)
+);
+const remove=makeButton("Remove","save",()=>{
+saved.delete(o.id);
+persist();
+render();
+});
+item.append(info,remove);
+list.append(item);
+});
+}
+
+function planText(){
+const name=$("firstName").value.trim()||"My";
+const birthday=$("birthday").value;
+const city=$("city").value.trim();
+
+let text=name+"'s Birthday Plan\n";
+if(birthday)text+="Birthday: "+birthday+"\n";
+if(city)text+="City/ZIP: "+city+"\n";
+text+="\n";
+
+offers.filter(o=>saved.has(o.id)).forEach((o,i)=>{
+text+=(i+1)+". "+o.name+"\n";
+text+="Offer: "+o.reward+"\n";
+text+="Requirements: "+o.rules+"\n";
+text+="Official Website: "+o.url+"\n\n";
+});
+
+text+="Always verify current offers and requirements before visiting.";
+return text;
+}
+
+$("firstName").value=details.name||"";
+$("birthday").value=details.birthday||"";
+$("city").value=details.city||"";
+
+$("saveDetails").addEventListener("click",()=>{
+details={
+name:$("firstName").value.slice(0,100),
+birthday:$("birthday").value,
+city:$("city").value.slice(0,100)
+};
+persist();
+toast("Your details were saved in this browser.");
+});
+
+document.querySelectorAll(".chip").forEach(btn=>{
+btn.addEventListener("click",()=>{
+active=btn.dataset.category;
+render();
+});
+});
+
+$("filterQuery").addEventListener("input",render);
+$("rewardFilter").addEventListener("change",render);
+$("savedOnly").addEventListener("change",render);
+
+$("heroSearch").addEventListener("submit",e=>{
+e.preventDefault();
+$("filterQuery").value=$("heroQuery").value;
+active=$("heroCategory").value;
+$("savedOnly").checked=false;
+render();
+$("offers").scrollIntoView({behavior:"smooth"});
+});
+
+$("copyPlan").addEventListener("click",async()=>{
+if(!saved.size){
+toast("Save some birthday offers first.");
+return;
+}
+try{
+await navigator.clipboard.writeText(planText());
+toast("Your birthday plan was copied.");
+}catch(e){
+toast("Copy unavailable. Try Print My Plan.");
+}
+});
+
+$("clearPlan").addEventListener("click",()=>{
+if(!saved.size)return;
+if(confirm("Remove all saved birthday offers?")){
+saved.clear();
+persist();
+render();
+toast("Your saved offers were cleared.");
+}
+});
+
+$("printPlan").addEventListener("click",()=>{
+if(!saved.size){
+toast("Save some birthday offers first.");
+return;
+}
+const w=window.open("","_blank");
+if(!w){
+toast("Please allow popups to print.");
+return;
+}
+const pre=w.document.createElement("pre");
+pre.style.cssText="white-space:pre-wrap;font:16px/1.6 Arial,sans-serif;margin:35px";
+pre.textContent=planText();
+w.document.title="My Birthday Plan";
+w.document.body.append(pre);
+w.focus();
+w.print();
+});
+
+$("year").textContent=new Date().getFullYear();
+render();
+</script>
+
+</body>
+</html>
