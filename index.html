@@ -4,15 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#180d31">
-<meta name="description" content="Birthday0.com helps you discover birthday freebies, free food, drinks, beauty gifts, casino rewards, nightlife offers and more. Your Birthday. Zero Cost. All Fun!">
-<meta name="keywords" content="birthday freebies, free birthday food, birthday gifts, birthday rewards, birthday deals, birthday casino offers, Birthday0">
+<meta name="description" content="Birthday0.com helps you discover birthday freebies, restaurant rewards, coffee, beauty gifts, entertainment and casino promotions.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Birthday0.com | Your Birthday. Zero Cost. All Fun!">
-<meta property="og:description" content="Discover birthday freebies, rewards, gifts, food, drinks and entertainment.">
+<meta property="og:description" content="Explore birthday freebies and rewards from national businesses.">
 <meta property="og:url" content="https://birthday0.com/">
+<link rel="canonical" href="https://birthday0.com/">
 <title>Birthday0.com | Your Birthday. Zero Cost. All Fun!</title>
-
 <style>
 :root{
 --dark:#180d31;
@@ -59,11 +58,7 @@ text-decoration:none;
 white-space:nowrap;
 }
 .logo span{color:var(--gold)}
-.links{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
+.links{display:flex;gap:20px;flex-wrap:wrap}
 .links a{
 color:white;
 text-decoration:none;
@@ -249,8 +244,6 @@ flex:1;
 .pill{
 display:inline-block;
 align-self:flex-start;
-background:#e9f7ee;
-color:#17603e;
 border-radius:30px;
 font-size:12px;
 font-weight:800;
@@ -334,10 +327,7 @@ justify-content:space-between;
 align-items:center;
 gap:10px;
 }
-.planitem small{
-display:block;
-color:var(--muted);
-}
+.planitem small{display:block;color:var(--muted)}
 .steps{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -413,7 +403,6 @@ section{padding:46px 0}
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -429,13 +418,11 @@ section{padding:46px 0}
 </header>
 
 <main>
-
 <div class="hero" id="home">
 <div class="wrap">
 <div class="eyebrow">🎂 YOUR BIRTHDAY. ZERO COST. ALL FUN.</div>
 <h1>It's Your Birthday.<br><span>Let Everyone Else Treat You!</span></h1>
 <p>Free food. Free drinks. Birthday gifts. Casino perks. Nightlife rewards. Discover birthday treats, find the deals and plan your ultimate birthday.</p>
-
 <form id="heroSearch" class="search">
 <input id="heroQuery" type="search" placeholder="Search coffee, pancakes, beauty, casinos..." aria-label="Search birthday offers">
 <select id="heroCategory" aria-label="Category">
@@ -448,14 +435,13 @@ section{padding:46px 0}
 </select>
 <button class="btn" type="submit">Find Freebies →</button>
 </form>
-
 <p class="hero-note">✓ Free to use &nbsp; ✓ No registration here &nbsp; ✓ Official business links</p>
 </div>
 </div>
 
 <div class="wrap stats">
 <div class="stat"><strong>$0</strong><span>Website access</span></div>
-<div class="stat"><strong>5 Categories</strong><span>Explore birthday perks</span></div>
+<div class="stat"><strong>68 Listings</strong><span>Explore birthday perks</span></div>
 <div class="stat"><strong>My Birthday</strong><span>Save your favorites</span></div>
 </div>
 
@@ -463,11 +449,9 @@ section{padding:46px 0}
 <div class="wrap">
 <h2>Find Your Birthday Freebies 🎁</h2>
 <p class="sub">Explore birthday treats, gifts, loyalty rewards, entertainment and special offers.</p>
-
 <div class="notice">
 <strong>Heads up!</strong> Some birthday rewards require advance signup, a loyalty account, qualifying purchases or membership status. Some listings are programs to investigate rather than confirmed free giveaways. Always check the official offer before visiting.
 </div>
-
 <div class="chips">
 <button class="chip active" data-category="all">🎉 All Offers</button>
 <button class="chip" data-category="Food">🍔 Restaurants</button>
@@ -476,7 +460,6 @@ section{padding:46px 0}
 <button class="chip" data-category="Entertainment">🎬 Entertainment</button>
 <button class="chip" data-category="Casino">🎰 Casinos & Nightlife</button>
 </div>
-
 <div class="toolbar">
 <input id="filterQuery" type="search" placeholder="Search business, gift or keyword..." aria-label="Filter listings">
 <select id="rewardFilter" aria-label="Offer type">
@@ -487,7 +470,6 @@ section{padding:46px 0}
 <label><input id="savedOnly" type="checkbox"> Saved Only</label>
 <span id="resultCount" style="font-size:13px;color:#666"></span>
 </div>
-
 <div class="grid" id="cards"></div>
 <div id="noResults" class="empty hidden">No matching offers found. Try a different search or category.</div>
 </div>
@@ -497,7 +479,6 @@ section{padding:46px 0}
 <div class="wrap">
 <h2>🎂 My Birthday Planner</h2>
 <p class="sub">Save your favorite birthday offers and create your own birthday checklist.</p>
-
 <div class="two">
 <div class="panel">
 <h3>Plan Your Birthday</h3>
@@ -513,17 +494,16 @@ section{padding:46px 0}
 <label for="city">Your City or ZIP Code (Optional)</label>
 <input id="city" placeholder="Example: Las Vegas, NV">
 </div>
-<button class="btn purple" id="saveDetails">Save My Details</button>
+<button class="btn purple" id="saveDetails" type="button">Save My Details</button>
 <p style="font-size:13px;color:#6a6678">Details stay in this browser. Entering a city does not automatically filter or verify nearby offers.</p>
 </div>
-
 <div class="panel">
 <h3>My Saved Birthday Offers <span id="planCount">(0)</span></h3>
 <div id="planList"></div>
 <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:20px">
-<button class="btn purple small" id="copyPlan">Copy My Plan</button>
-<button class="btn small" id="printPlan">Print My Plan</button>
-<button class="btn light small" id="clearPlan">Clear Saved</button>
+<button class="btn purple small" id="copyPlan" type="button">Copy My Plan</button>
+<button class="btn small" id="printPlan" type="button">Print My Plan</button>
+<button class="btn light small" id="clearPlan" type="button">Clear Saved</button>
 </div>
 </div>
 </div>
@@ -534,7 +514,6 @@ section{padding:46px 0}
 <div class="wrap">
 <h2>How Birthday0.com Works</h2>
 <p class="sub">Your birthday adventure starts here.</p>
-
 <div class="steps">
 <div class="step">
 <b>01</b>
@@ -578,7 +557,6 @@ section{padding:46px 0}
 </div>
 </div>
 </section>
-
 </main>
 
 <footer>
@@ -600,188 +578,156 @@ section{padding:46px 0}
 <script>
 "use strict";
 
-const offers=[
-{
-id:"starbucks",name:"Starbucks Rewards",cat:"Coffee",type:"conditional",
-reward:"Birthday drink or food reward",
-desc:"Eligible Starbucks Rewards members may receive a complimentary birthday item.",
-rules:"Advance enrollment, qualifying activity and redemption restrictions apply.",
-url:"https://www.starbucks.com/rewards",
-img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
-tags:"coffee latte frappuccino drink"
-},
-{
-id:"ihop",name:"IHOP Rewards",cat:"Food",type:"conditional",
-reward:"Birthday pancakes reward",
-desc:"IHOP offers birthday-related rewards through its loyalty program.",
-rules:"Membership, participating locations and current reward terms apply.",
-url:"https://www.ihop.com/en/rewards",
-img:"https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80",
-tags:"pancakes breakfast restaurant"
-},
-{
-id:"dennys",name:"Denny's",cat:"Food",type:"variable",
-reward:"Check birthday breakfast offers",
-desc:"Explore any available birthday benefits through Denny's rewards programs.",
-rules:"Offers vary. Do not assume a free meal is available without confirmation.",
-url:"https://www.dennys.com/",
-img:"https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80",
-tags:"breakfast diner pancakes"
-},
-{
-id:"krispy",name:"Krispy Kreme",cat:"Food",type:"conditional",
-reward:"Birthday doughnut rewards",
-desc:"Birthday-related treats may be available through Krispy Kreme Rewards.",
-rules:"App or membership and current offer terms apply.",
-url:"https://www.krispykreme.com/",
-img:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
-tags:"donuts doughnuts sweets dessert"
-},
-{
-id:"baskin",name:"Baskin-Robbins",cat:"Food",type:"conditional",
-reward:"Birthday ice cream benefits",
-desc:"Explore birthday offers associated with Baskin-Robbins rewards.",
-rules:"Participation, account eligibility and reward details may vary.",
-url:"https://www.baskinrobbins.com/",
-img:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
-tags:"ice cream dessert"
-},
-{
-id:"jersey",name:"Jersey Mike's",cat:"Food",type:"conditional",
-reward:"Birthday sandwich reward",
-desc:"Eligible loyalty members may receive birthday-related rewards.",
-rules:"Check MyMike's and Shore Points eligibility, qualifying activity and redemption terms.",
-url:"https://www.jerseymikes.com/",
-img:"https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=800&q=80",
-tags:"sandwich sub lunch"
-},
-{
-id:"chick",name:"Chick-fil-A One",cat:"Food",type:"conditional",
-reward:"Birthday reward based on membership",
-desc:"Eligible Chick-fil-A One members may receive birthday benefits.",
-rules:"Reward availability and selection depend on membership tier and program terms.",
-url:"https://www.chick-fil-a.com/one",
-img:"https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
-tags:"chicken sandwich restaurant"
-},
-{
-id:"buffalo",name:"Buffalo Wild Wings",cat:"Food",type:"conditional",
-reward:"Birthday wings or rewards",
-desc:"Explore birthday benefits associated with Buffalo Wild Wings rewards.",
-rules:"Enrollment, location and current redemption rules apply.",
-url:"https://www.buffalowildwings.com/",
-img:"https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
-tags:"wings sports restaurant"
-},
-{
-id:"panera",name:"MyPanera",cat:"Food",type:"variable",
-reward:"Personalized birthday surprise",
-desc:"MyPanera may provide personalized rewards that include birthday offers.",
-rules:"Not all members receive the same reward. Check your account.",
-url:"https://www.panerabread.com/en-us/mypanera.html",
-img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
-tags:"bakery bread cafe"
-},
-{
-id:"benjerry",name:"Ben & Jerry's",cat:"Food",type:"variable",
-reward:"Check birthday ice cream promotions",
-desc:"Explore current offers and participating Scoop Shop promotions.",
-rules:"No nationwide birthday giveaway is guaranteed.",
-url:"https://www.benjerry.com/",
-img:"https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=800&q=80",
-tags:"ice cream scoop dessert"
-},
-{
-id:"dutch",name:"Dutch Bros Rewards",cat:"Coffee",type:"conditional",
-reward:"Birthday drink benefit",
-desc:"Dutch Bros has offered birthday drink rewards through its app.",
-rules:"App account, enrollment and redemption requirements apply.",
-url:"https://www.dutchbros.com/",
-img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
-tags:"coffee drinks beverage"
-},
-{
-id:"dunkin",name:"Dunkin' Rewards",cat:"Coffee",type:"variable",
-reward:"Check birthday loyalty benefits",
-desc:"Explore current birthday-related Dunkin' Rewards offers.",
-rules:"Do not assume a complimentary birthday drink; benefits may change.",
-url:"https://www.dunkindonuts.com/en/dunkinrewards",
-img:"https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80",
-tags:"coffee donuts breakfast"
-},
-{
-id:"sephora",name:"Sephora Beauty Insider",cat:"Beauty",type:"conditional",
-reward:"Birthday beauty gift",
-desc:"Eligible Beauty Insider members can choose from birthday gift options.",
-rules:"Membership, gift availability and in-store versus online redemption terms apply.",
-url:"https://www.sephora.com/profile/BeautyInsider",
-img:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
-tags:"makeup cosmetics skincare beauty"
-},
-{
-id:"ulta",name:"Ulta Beauty Rewards",cat:"Beauty",type:"conditional",
-reward:"Birthday beauty gift and member offers",
-desc:"Ulta's loyalty program offers birthday-related beauty rewards.",
-rules:"Account, birthday registration, availability and redemption conditions apply.",
-url:"https://www.ulta.com/rewards",
-img:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-tags:"makeup skincare beauty shopping"
-},
-{
-id:"amc",name:"AMC Stubs",cat:"Entertainment",type:"conditional",
-reward:"Birthday concession benefit",
-desc:"Certain AMC Stubs membership levels include birthday concessions.",
-rules:"Membership tier, participating theater and current terms apply.",
-url:"https://www.amctheatres.com/amcstubs",
-img:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
-tags:"movies cinema popcorn"
-},
-{
-id:"regal",name:"Regal Crown Club",cat:"Entertainment",type:"variable",
-reward:"Check birthday movie perks",
-desc:"Explore current birthday benefits for eligible Regal members.",
-rules:"Membership tier and program terms determine availability.",
-url:"https://www.regmovies.com/",
-img:"https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=800&q=80",
-tags:"movies cinema popcorn"
-},
-{
-id:"wynn",name:"Wynn Rewards — Las Vegas",cat:"Casino",type:"variable",
-reward:"Possible birthday casino benefits",
-desc:"Certain Wynn Rewards tiers may include birthday dining or gaming benefits.",
-rules:"Not a universal free gift. Tier, rated play and current rules apply.",
-url:"https://www.wynnlasvegas.com/wynn-rewards",
-img:"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=800&q=80",
-tags:"casino vegas las vegas resort"
-},
-{
-id:"mgm",name:"MGM Rewards",cat:"Casino",type:"variable",
-reward:"Check member birthday promotions",
-desc:"Explore birthday-specific offers available to qualifying MGM Rewards members.",
-rules:"No birthday reward is promised. Property, tier and promotional terms vary.",
-url:"https://www.mgmresorts.com/en/mgm-rewards.html",
-img:"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=800&q=80",
-tags:"casino las vegas resort"
-},
-{
-id:"caesars",name:"Caesars Rewards",cat:"Casino",type:"variable",
-reward:"Check property-specific birthday perks",
-desc:"Ask participating Caesars properties about current birthday promotions.",
-rules:"No universal birthday benefit is claimed. Verify eligibility directly.",
-url:"https://www.caesars.com/myrewards",
-img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
-tags:"casino las vegas nightlife"
-},
-{
-id:"nightlife",name:"Local Nightclubs & Birthday Hosts",cat:"Casino",type:"variable",
-reward:"Check birthday guest-list and VIP offers",
-desc:"Some nightclubs offer birthday guest-list privileges or promotional packages.",
-rules:"No specific free admission, drinks or VIP package is guaranteed. Age and dress-code restrictions may apply.",
-url:"https://www.google.com/maps/search/nightclubs/",
-img:"https://images.unsplash.com/photo-1571266028243-d220c9a3a157?auto=format&fit=crop&w=800&q=80",
-tags:"nightclubs nightlife vip birthday"
-}
+/*
+Each entry:
+Name | Category | Offer type | Description | Official URL
+
+"conditional" means an established or previously offered
+birthday reward program with eligibility requirements.
+
+"variable" means visitors must check whether a current
+birthday offer is available. It is NOT a promised freebie.
+*/
+
+const data=[
+["Starbucks Rewards","Coffee","conditional","Birthday drink or food reward","https://www.starbucks.com/rewards"],
+["IHOP Rewards","Food","conditional","Birthday pancakes reward","https://www.ihop.com/en/rewards"],
+["Denny's","Food","variable","Check birthday breakfast offers","https://www.dennys.com/"],
+["Krispy Kreme","Food","conditional","Birthday doughnut rewards","https://www.krispykreme.com/"],
+["Baskin-Robbins","Food","conditional","Birthday ice cream benefits","https://www.baskinrobbins.com/"],
+["Jersey Mike's","Food","conditional","Birthday sandwich reward","https://www.jerseymikes.com/"],
+["Chick-fil-A One","Food","conditional","Birthday reward based on membership","https://www.chick-fil-a.com/one"],
+["Buffalo Wild Wings","Food","conditional","Birthday wings or rewards","https://www.buffalowildwings.com/"],
+["MyPanera","Food","variable","Personalized birthday surprise","https://www.panerabread.com/en-us/mypanera.html"],
+["Ben & Jerry's","Food","variable","Check birthday ice cream promotions","https://www.benjerry.com/"],
+["Dutch Bros Rewards","Coffee","conditional","Birthday drink benefit","https://www.dutchbros.com/"],
+["Dunkin' Rewards","Coffee","variable","Check birthday loyalty benefits","https://www.dunkindonuts.com/en/dunkinrewards"],
+["Sephora Beauty Insider","Beauty","conditional","Birthday beauty gift","https://www.sephora.com/profile/BeautyInsider"],
+["Ulta Beauty Rewards","Beauty","conditional","Birthday beauty gift and member offers","https://www.ulta.com/rewards"],
+["AMC Stubs","Entertainment","conditional","Birthday concession benefit","https://www.amctheatres.com/amcstubs"],
+["Regal Crown Club","Entertainment","variable","Check birthday movie perks","https://www.regmovies.com/"],
+["Wynn Rewards — Las Vegas","Casino","variable","Possible birthday casino benefits","https://www.wynnlasvegas.com/wynn-rewards"],
+["MGM Rewards","Casino","variable","Check member birthday promotions","https://www.mgmresorts.com/en/mgm-rewards.html"],
+["Caesars Rewards","Casino","variable","Check property-specific birthday perks","https://www.caesars.com/myrewards"],
+["Local Nightclubs & Birthday Hosts","Casino","variable","Check birthday guest-list and VIP offers","https://www.google.com/maps/search/nightclubs/"],
+
+["Red Robin Royalty","Food","conditional","Check birthday burger reward","https://www.redrobin.com/"],
+["Firehouse Subs Rewards","Food","conditional","Check birthday sub reward","https://www.firehousesubs.com/"],
+["Moe's Rewards","Food","variable","Check birthday rewards","https://www.moes.com/"],
+["QDOBA Rewards","Food","variable","Check birthday reward options","https://www.qdoba.com/"],
+["Nothing Bundt Cakes","Food","conditional","Check birthday Bundtlet reward","https://www.nothingbundtcakes.com/"],
+["Crumbl Rewards","Food","variable","Check birthday cookie rewards","https://crumblcookies.com/"],
+["Cinnabon Rewards","Food","variable","Check birthday bakery offers","https://www.cinnabon.com/"],
+["Auntie Anne's Rewards","Food","variable","Check birthday pretzel offers","https://www.auntieannes.com/"],
+["Tropical Smoothie Cafe","Coffee","variable","Check birthday smoothie rewards","https://www.tropicalsmoothiecafe.com/"],
+["Jamba Rewards","Coffee","variable","Check birthday smoothie offers","https://www.jamba.com/"],
+["Caribou Coffee Perks","Coffee","conditional","Check birthday coffee perk","https://www.cariboucoffee.com/"],
+["Peet's Coffee Rewards","Coffee","variable","Check birthday coffee offers","https://www.peets.com/"],
+["BIGGBY Coffee Rewards","Coffee","variable","Check birthday drink rewards","https://www.biggby.com/"],
+["Smoothie King Healthy Rewards","Coffee","variable","Check birthday smoothie benefits","https://www.smoothieking.com/"],
+["Cold Stone Creamery","Food","conditional","Check birthday ice cream reward","https://www.coldstonecreamery.com/"],
+["Dairy Queen Rewards","Food","variable","Check birthday dessert rewards","https://www.dairyqueen.com/"],
+["Friendly's","Food","variable","Check birthday ice cream offers","https://www.friendlysrestaurants.com/"],
+["SONIC Rewards","Food","variable","Check birthday food or drink offers","https://www.sonicdrivein.com/"],
+["Applebee's","Food","variable","Check birthday dining rewards","https://www.applebees.com/"],
+["Chili's Rewards","Food","variable","Check birthday dining benefits","https://www.chilis.com/"],
+["Outback Steakhouse","Food","variable","Check birthday dining offers","https://www.outback.com/"],
+["Texas Roadhouse","Food","variable","Check birthday restaurant offers","https://www.texasroadhouse.com/"],
+["Olive Garden","Food","variable","Check birthday dining promotions","https://www.olivegarden.com/"],
+["Red Lobster Rewards","Food","variable","Check birthday seafood offers","https://www.redlobster.com/"],
+["Pizza Hut Hut Rewards","Food","variable","Check birthday pizza promotions","https://www.pizzahut.com/"],
+["Papa Johns Rewards","Food","variable","Check birthday pizza rewards","https://www.papajohns.com/"],
+["TGI Fridays","Food","variable","Check birthday restaurant rewards","https://www.tgifridays.com/"],
+
+["Bath & Body Works Rewards","Beauty","conditional","Check birthday gift offer","https://www.bathandbodyworks.com/"],
+["DSW VIP","Beauty","variable","Check birthday shopping rewards","https://www.dsw.com/"],
+["Kendra Scott","Beauty","variable","Check birthday jewelry discount","https://www.kendrascott.com/"],
+["Kohl's Rewards","Beauty","variable","Check birthday shopping perks","https://www.kohls.com/"],
+["Victoria's Secret & PINK","Beauty","variable","Check birthday member offers","https://www.victoriassecret.com/"],
+
+["Marriott Bonvoy","Entertainment","variable","Check birthday travel promotions","https://www.marriott.com/loyalty.mi"],
+["Hilton Honors","Entertainment","variable","Check birthday travel offers","https://www.hilton.com/en/hilton-honors/"],
+["Dave & Buster's Rewards","Entertainment","variable","Check birthday arcade rewards","https://www.daveandbusters.com/"],
+["Bowlero","Entertainment","variable","Check birthday bowling offers","https://www.bowlero.com/"],
+["Cinemark Movie Rewards","Entertainment","variable","Check birthday movie benefits","https://www.cinemark.com/"],
+["Harkins Awards","Entertainment","variable","Check birthday movie perks","https://www.harkins.com/"],
+
+["Hard Rock Unity Rewards","Casino","variable","Check birthday casino promotions","https://unity.hardrock.com/"],
+["Boyd Rewards","Casino","variable","Check birthday casino offers","https://www.boydgaming.com/"],
+["PENN Play","Casino","variable","Check birthday casino promotions","https://www.pennplay.com/"],
+["Station Casinos Boarding Pass","Casino","variable","Check birthday Las Vegas promotions","https://www.stationcasinos.com/"],
+["Venetian Rewards","Casino","variable","Check birthday resort promotions","https://www.venetianlasvegas.com/"],
+["Genting Rewards at Resorts World","Casino","variable","Check birthday casino promotions","https://www.rwlasvegas.com/"],
+["Foxwoods Rewards","Casino","variable","Check birthday casino benefits","https://www.foxwoods.com/"],
+["Momentum by Mohegan","Casino","variable","Check birthday casino offers","https://mohegansun.com/"],
+["Ocean Rewards","Casino","variable","Check birthday Atlantic City offers","https://www.theoceanac.com/"],
+["Borgata MGM Rewards","Casino","variable","Check birthday Atlantic City offers","https://borgata.mgmresorts.com/"]
 ];
+
+/* Illustrative photographs by category */
+
+const images={
+Food:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
+Coffee:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+Beauty:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
+Entertainment:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
+Casino:"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=800&q=80"
+};
+
+/* Preserve selected original listing photographs */
+
+const originalImages={
+0:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+1:"https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80",
+2:"https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80",
+4:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
+5:"https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=800&q=80",
+6:"https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
+7:"https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80",
+8:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
+9:"https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=800&q=80",
+10:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+11:"https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80",
+13:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+15:"https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=800&q=80",
+18:"https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+19:"https://images.unsplash.com/photo-1571266028243-d220c9a3a157?auto=format&fit=crop&w=800&q=80"
+};
+
+const specialRules={
+0:"Advance enrollment, qualifying activity and redemption restrictions apply.",
+1:"Membership, participating locations and current reward terms apply.",
+5:"Check MyMike's and Shore Points eligibility, qualifying activity and redemption terms.",
+6:"Reward availability and selection depend on membership tier and program terms.",
+12:"Membership, gift availability and in-store versus online redemption terms apply.",
+13:"Account, birthday registration, availability and redemption conditions apply.",
+14:"Membership tier, participating theater and current terms apply.",
+16:"Not a universal free gift. Tier, rated play and current rules apply.",
+17:"No birthday reward is promised. Property, tier and promotional terms vary.",
+18:"No universal birthday benefit is claimed. Verify eligibility directly.",
+19:"No specific free admission, drinks or VIP package is guaranteed. Age and dress-code restrictions may apply.",
+20:"Check qualifying purchases, enrollment, account eligibility and current terms.",
+21:"Check app enrollment, qualifying purchases and birthday redemption rules.",
+24:"Join and check the current reward, participating bakeries and deadlines."
+};
+
+const offers=data.map((entry,i)=>{
+const [name,cat,type,reward,url]=entry;
+const rules=specialRules[i]||
+(type==="conditional"
+?"Membership, eligibility, participating locations and current redemption requirements apply."
+:"A birthday offer is not guaranteed. Check current promotions, account eligibility and participating locations.");
+
+return{
+id:"offer"+i,
+name,cat,type,reward,url,rules,
+desc:type==="conditional"
+?"Explore this business's birthday rewards program and verify the current benefit before visiting."
+:"Explore the business's current loyalty offers or ask whether any birthday promotion is available.",
+img:originalImages[i]||images[cat],
+tags:name+" "+cat+" birthday rewards"
+};
+});
 
 const $=id=>document.getElementById(id);
 const storageKey="birthday0_saved_v1";
@@ -789,9 +735,26 @@ let saved=new Set();
 let details={};
 let active="all";
 
+/* Load saved offers from this browser */
+
 try{
 const old=JSON.parse(localStorage.getItem(storageKey)||"{}");
-saved=new Set((old.saved||[]).filter(id=>offers.some(o=>o.id===id)));
+const previous=Array.isArray(old.saved)?old.saved:[];
+
+const legacyIds=[
+"starbucks","ihop","dennys","krispy","baskin",
+"jersey","chick","buffalo","panera","benjerry",
+"dutch","dunkin","sephora","ulta","amc","regal",
+"wynn","mgm","caesars","nightlife"
+];
+
+saved=new Set(
+previous.map(id=>{
+const legacyIndex=legacyIds.indexOf(id);
+return legacyIndex>=0?"offer"+legacyIndex:id;
+}).filter(id=>offers.some(o=>o.id===id))
+);
+
 details=old.details||{};
 }catch(e){}
 
@@ -831,17 +794,21 @@ function createCard(o){
 const card=element("article","card");
 const photo=element("div","photo");
 const img=element("img");
+
 img.src=o.img;
 img.alt="Illustrative photograph for "+o.cat;
 img.loading="lazy";
 img.onerror=()=>img.style.display="none";
+
 photo.append(img,element("span","tag",o.cat));
 card.append(photo);
 
 const body=element("div","cardbody");
 body.append(element("h3","",o.name));
 
-const pillText=o.type==="conditional"?"Conditions Apply":"Check Current Offer";
+const pillText=o.type==="conditional"
+?"Conditions Apply":"Check Current Offer";
+
 body.append(element("span","pill "+o.type,pillText));
 body.append(element("div","reward",o.reward));
 body.append(element("p","desc",o.desc));
@@ -854,6 +821,7 @@ document.createTextNode(o.rules)
 body.append(rules);
 
 const actions=element("div","actions");
+
 const link=element("a","btn purple small","Official Website ↗");
 link.href=o.url;
 link.target="_blank";
@@ -871,9 +839,12 @@ saved.add(o.id);
 }
 persist();
 render();
-toast(saved.has(o.id)?"Added to your birthday plan":"Removed from your birthday plan");
+toast(saved.has(o.id)
+?"Added to your birthday plan"
+:"Removed from your birthday plan");
 }
 );
+
 saveBtn.setAttribute("aria-pressed",saved.has(o.id));
 saveBtn.setAttribute("aria-label","Save or remove "+o.name);
 actions.append(saveBtn);
@@ -889,10 +860,14 @@ const type=$("rewardFilter").value;
 
 return offers.filter(o=>{
 const categoryMatch=active==="all"||o.cat===active;
-const text=(o.name+" "+o.reward+" "+o.desc+" "+o.tags+" "+o.cat).toLowerCase();
+const text=(
+o.name+" "+o.reward+" "+o.desc+" "+o.tags+" "+o.cat
+).toLowerCase();
+
 const searchMatch=!q||text.includes(q);
 const typeMatch=type==="all"||o.type===type;
 const savedMatch=!$("savedOnly").checked||saved.has(o.id);
+
 return categoryMatch&&searchMatch&&typeMatch&&savedMatch;
 });
 }
@@ -919,22 +894,28 @@ const list=$("planList");
 list.replaceChildren();
 
 if(!selected.length){
-list.append(element("p","sub","No saved offers yet. Browse the listings and tap ♡ Save."));
+list.append(element(
+"p","sub",
+"No saved offers yet. Browse the listings and tap ♡ Save."
+));
 return;
 }
 
 selected.forEach(o=>{
 const item=element("div","planitem");
 const info=element("div");
+
 info.append(
 element("strong","",o.name),
 element("small","",o.reward)
 );
+
 const remove=makeButton("Remove","save",()=>{
 saved.delete(o.id);
 persist();
 render();
 });
+
 item.append(info,remove);
 list.append(item);
 });
@@ -946,8 +927,10 @@ const birthday=$("birthday").value;
 const city=$("city").value.trim();
 
 let text=name+"'s Birthday Plan\n";
+
 if(birthday)text+="Birthday: "+birthday+"\n";
 if(city)text+="City/ZIP: "+city+"\n";
+
 text+="\n";
 
 offers.filter(o=>saved.has(o.id)).forEach((o,i)=>{
@@ -959,6 +942,7 @@ text+="Official Website: "+o.url+"\n\n";
 
 text+="Always verify current offers and requirements before visiting.\n";
 text+="Created with Birthday0.com";
+
 return text;
 }
 
@@ -1011,6 +995,7 @@ toast("Copy unavailable. Try Print My Plan.");
 
 $("clearPlan").addEventListener("click",()=>{
 if(!saved.size)return;
+
 if(confirm("Remove all saved birthday offers?")){
 saved.clear();
 persist();
@@ -1024,14 +1009,19 @@ if(!saved.size){
 toast("Save some birthday offers first.");
 return;
 }
+
 const w=window.open("","_blank");
+
 if(!w){
 toast("Please allow popups to print.");
 return;
 }
+
 const pre=w.document.createElement("pre");
-pre.style.cssText="white-space:pre-wrap;font:16px/1.6 Arial,sans-serif;margin:35px";
+pre.style.cssText=
+"white-space:pre-wrap;font:16px/1.6 Arial,sans-serif;margin:35px";
 pre.textContent=planText();
+
 w.document.title="My Birthday Plan";
 w.document.body.append(pre);
 w.focus();
@@ -1041,6 +1031,5 @@ w.print();
 $("year").textContent=new Date().getFullYear();
 render();
 </script>
-
 </body>
 </html>
