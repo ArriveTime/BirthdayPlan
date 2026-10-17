@@ -3,395 +3,109 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#180d31">
-<meta name="description" content="Bday0.com helps you find birthday freebies, free food, drinks, beauty gifts, casino rewards, nightlife offers and more. Your Bday. Zero Cost. All Fun!">
-<meta name="keywords" content="birthday freebies, bday freebies, free birthday food, free birthday gifts, birthday rewards, birthday casino offers, birthday nightlife, Bday0">
+<meta name="description" content="Bday0.com helps you find birthday freebies, free food, drinks, beauty gifts, casino rewards, nightlife offers and more. Your Birthday. Zero Cost. All Fun!">
+<meta name="keywords" content="birthday freebies, free birthday food, birthday gifts, birthday rewards, casino birthday offers, Bday0">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Bday0.com | Your Bday. Zero Cost. All Fun!">
+<meta property="og:title" content="Bday0.com | Your Birthday. Zero Cost. All Fun!">
 <meta property="og:description" content="Discover birthday freebies, rewards, gifts, food, drinks and entertainment.">
 <meta property="og:url" content="https://bday0.com/">
-<title>Bday0.com | Your Bday. Zero Cost. All Fun!</title>
+<title>Bday0.com | Your Birthday. Zero Cost. All Fun!</title>
 
 <style>
 :root{
---dark:#180d31;
---purple:#6324b0;
---pink:#f43f85;
---gold:#ffd36d;
---text:#29243c;
---muted:#686376;
---bg:#faf8ff;
---line:#e9e1f1;
+--dark:#180d31;--purple:#6324b0;--pink:#f43f85;
+--gold:#ffd36d;--text:#29243c;--muted:#686376;
+--bg:#faf8ff;--line:#e9e1f1
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-margin:0;
-background:var(--bg);
-color:var(--text);
-font:16px/1.55 system-ui,-apple-system,Arial,sans-serif;
-}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Arial,sans-serif}
 button,input,select{font:inherit}
 button{cursor:pointer}
 a{color:var(--purple)}
 .wrap{width:min(1180px,92%);margin:auto}
-header{
-background:var(--dark);
-position:sticky;
-top:0;
-z-index:30;
-box-shadow:0 4px 20px #0003;
-}
-nav{
-min-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
-}
-.logo{
-font-size:clamp(25px,3vw,32px);
-font-weight:950;
-letter-spacing:-1px;
-color:white;
-text-decoration:none;
-white-space:nowrap;
-}
+header{background:var(--dark);position:sticky;top:0;z-index:30;box-shadow:0 4px 20px #0003}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:clamp(25px,3vw,32px);font-weight:950;letter-spacing:-1px;color:white;text-decoration:none;white-space:nowrap}
 .logo span{color:var(--gold)}
-.links{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-.links a{
-color:white;
-text-decoration:none;
-font-size:14px;
-font-weight:750;
-}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+.links a{color:white;text-decoration:none;font-size:14px;font-weight:750}
 .links a:hover{color:var(--gold)}
 .hero{
-background:
-linear-gradient(110deg,#180d31f2,#54218edb,#bb3075b8),
-url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85")
-center/cover;
-color:white;
+background:linear-gradient(110deg,#180d31f2,#54218edb,#bb3075b8),
+url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85") center/cover;
+color:white
 }
 .hero .wrap{padding:90px 0}
-.eyebrow{
-font-size:13px;
-letter-spacing:2px;
-font-weight:850;
-color:var(--gold);
-}
-h1{
-font-size:clamp(42px,6vw,76px);
-line-height:1.06;
-letter-spacing:-2px;
-margin:20px 0;
-}
+.eyebrow{font-size:13px;letter-spacing:2px;font-weight:850;color:var(--gold)}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.06;letter-spacing:-2px;margin:20px 0}
 h1 span{color:var(--gold)}
-.hero p{
-max-width:740px;
-font-size:19px;
-color:#f6ecff;
-}
-.search{
-background:white;
-display:flex;
-gap:8px;
-padding:9px;
-border-radius:16px;
-max-width:900px;
-margin-top:30px;
-box-shadow:0 15px 40px #0003;
-}
-.search input,.search select{
-border:0;
-padding:14px;
-min-width:0;
-background:white;
-color:var(--text);
-}
+.hero p{max-width:740px;font-size:19px;color:#f6ecff}
+.search{background:white;display:flex;gap:8px;padding:9px;border-radius:16px;max-width:900px;margin-top:30px;box-shadow:0 15px 40px #0003}
+.search input,.search select{border:0;padding:14px;min-width:0;background:white;color:var(--text)}
 .search input{flex:1}
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:12px 19px;
-background:var(--pink);
-border:0;
-border-radius:10px;
-color:white;
-text-decoration:none;
-font-weight:850;
-text-align:center;
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;background:var(--pink);border:0;border-radius:10px;color:white;text-decoration:none;font-weight:850;text-align:center}
 .btn:hover{filter:brightness(.93)}
 .btn.purple{background:var(--purple)}
-.btn.light{
-background:white;
-color:var(--purple);
-border:1px solid #ded2ee;
-}
+.btn.light{background:white;color:var(--purple);border:1px solid #ded2ee}
 .btn.small{font-size:13px;padding:9px 12px}
 .hero-note{font-size:13px!important}
-.stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin-top:-28px;
-position:relative;
-}
-.stat{
-background:white;
-padding:22px;
-text-align:center;
-border-radius:15px;
-box-shadow:0 7px 25px #0001;
-}
-.stat strong{
-display:block;
-font-size:26px;
-color:var(--purple);
-}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:-28px;position:relative}
+.stat{background:white;padding:22px;text-align:center;border-radius:15px;box-shadow:0 7px 25px #0001}
+.stat strong{display:block;font-size:26px;color:var(--purple)}
 .stat span{font-size:13px;color:var(--muted)}
 section{padding:65px 0}
-h2{
-font-size:clamp(28px,4vw,40px);
-line-height:1.2;
-letter-spacing:-1px;
-margin:0 0 12px;
-}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-1px;margin:0 0 12px}
 .sub{color:var(--muted);margin:0 0 24px}
-.chips{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin:24px 0;
-}
-.chip{
-border:1px solid #ded6ea;
-border-radius:30px;
-background:white;
-padding:10px 16px;
-color:#5b4772;
-font-weight:750;
-}
-.chip.active{
-background:var(--purple);
-border-color:var(--purple);
-color:white;
-}
-.toolbar{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-align-items:center;
-margin-bottom:23px;
-}
-.toolbar input,.toolbar select{
-background:white;
-border:1px solid #dcd4e8;
-border-radius:10px;
-padding:12px;
-}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}
+.chip{border:1px solid #ded6ea;border-radius:30px;background:white;padding:10px 16px;color:#5b4772;font-weight:750}
+.chip.active{background:var(--purple);border-color:var(--purple);color:white}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:23px}
+.toolbar input,.toolbar select{background:white;border:1px solid #dcd4e8;border-radius:10px;padding:12px}
 .toolbar input[type=search]{flex:1;min-width:190px}
-.toolbar label{
-font-size:14px;
-display:flex;
-align-items:center;
-gap:7px;
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:20px;
-}
-.card{
-background:white;
-border:1px solid var(--line);
-border-radius:17px;
-overflow:hidden;
-display:flex;
-flex-direction:column;
-box-shadow:0 5px 20px #00000009;
-}
-.photo{
-height:165px;
-background:linear-gradient(120deg,#7736ad,#f07aaf);
-position:relative;
-}
-.photo img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-.tag{
-position:absolute;
-top:12px;
-left:12px;
-background:white;
-border-radius:30px;
-padding:5px 11px;
-font-size:12px;
-font-weight:850;
-color:var(--purple);
-}
-.cardbody{
-padding:19px;
-display:flex;
-flex-direction:column;
-flex:1;
-}
+.toolbar label{font-size:14px;display:flex;align-items:center;gap:7px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 20px #00000009}
+.photo{height:165px;background:linear-gradient(120deg,#7736ad,#f07aaf);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:12px;left:12px;background:white;border-radius:30px;padding:5px 11px;font-size:12px;font-weight:850;color:var(--purple)}
+.cardbody{padding:19px;display:flex;flex-direction:column;flex:1}
 .card h3{font-size:21px;margin:0 0 8px}
-.pill{
-display:inline-block;
-align-self:flex-start;
-background:#e9f7ee;
-color:#17603e;
-border-radius:30px;
-font-size:12px;
-font-weight:800;
-padding:5px 10px;
-margin-bottom:12px;
-}
-.pill.conditional{
-background:#fff0d6;
-color:#885300;
-}
-.pill.variable{
-background:#f0e8fc;
-color:#6324a0;
-}
+.pill{display:inline-block;align-self:flex-start;background:#e9f7ee;color:#17603e;border-radius:30px;font-size:12px;font-weight:800;padding:5px 10px;margin-bottom:12px}
+.pill.conditional{background:#fff0d6;color:#885300}
+.pill.variable{background:#f0e8fc;color:#6324a0}
 .reward{font-weight:850;margin-bottom:9px}
-.desc{
-color:var(--muted);
-font-size:14px;
-margin:0 0 13px;
-}
-.rules{
-font-size:13px;
-border-top:1px solid var(--line);
-padding-top:12px;
-margin-top:auto;
-}
+.desc{color:var(--muted);font-size:14px;margin:0 0 13px}
+.rules{font-size:13px;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
 .actions{display:flex;gap:8px;margin-top:16px}
 .actions a{flex:1}
-.save{
-border:1px solid #d8c7ea;
-background:white;
-border-radius:10px;
-padding:9px 12px;
-color:var(--purple);
-font-weight:800;
-}
-.save[aria-pressed=true]{
-background:#fce8f1;
-color:#a9145a;
-}
-.notice{
-background:#fff8e7;
-border:1px solid #f1dfa9;
-border-radius:13px;
-padding:16px 20px;
-color:#675029;
-font-size:14px;
-margin-bottom:23px;
-}
-.panel{
-background:white;
-border:1px solid var(--line);
-border-radius:18px;
-padding:26px;
-}
-.two{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:24px;
-}
+.save{border:1px solid #d8c7ea;background:white;border-radius:10px;padding:9px 12px;color:var(--purple);font-weight:800}
+.save[aria-pressed=true]{background:#fce8f1;color:#a9145a}
+.notice{background:#fff8e7;border:1px solid #f1dfa9;border-radius:13px;padding:16px 20px;color:#675029;font-size:14px;margin-bottom:23px}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .field{margin-bottom:15px}
-.field label{
-display:block;
-font-size:14px;
-font-weight:800;
-margin-bottom:6px;
-}
-.field input{
-width:100%;
-border:1px solid #dcd4e8;
-border-radius:10px;
-padding:12px;
-}
-.planitem{
-padding:12px;
-border:1px solid var(--line);
-border-radius:11px;
-margin-bottom:10px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-}
-.planitem small{
-display:block;
-color:var(--muted);
-}
-.steps{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-.step{
-background:white;
-border:1px solid var(--line);
-border-radius:16px;
-padding:24px;
-}
+.field label{display:block;font-size:14px;font-weight:800;margin-bottom:6px}
+.field input{width:100%;border:1px solid #dcd4e8;border-radius:10px;padding:12px}
+.planitem{padding:12px;border:1px solid var(--line);border-radius:11px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.planitem small{display:block;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:white;border:1px solid var(--line);border-radius:16px;padding:24px}
 .step b{font-size:28px;color:var(--pink)}
 .step h3{margin:8px 0}
 .step p{color:var(--muted);margin:0}
-.dark{
-background:linear-gradient(120deg,#180d31,#54238b);
-color:white;
-}
+.dark{background:linear-gradient(120deg,#180d31,#54238b);color:white}
 .dark p{color:#e8dcf2}
-footer{
-background:#111025;
-color:#d6d1e3;
-padding:40px 0;
-}
+footer{background:#111025;color:#d6d1e3;padding:40px 0}
 footer a{color:white}
-.foot{
-display:flex;
-justify-content:space-between;
-gap:25px;
-flex-wrap:wrap;
-}
+.foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
 footer small{color:#bbb5cb}
-.empty{
-background:white;
-padding:32px;
-border:1px dashed #cbbce0;
-border-radius:14px;
-text-align:center;
-}
+.empty{background:white;padding:32px;border:1px dashed #cbbce0;border-radius:14px;text-align:center}
 .hidden{display:none!important}
-#toast{
-display:none;
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-background:#24153f;
-color:white;
-padding:12px 20px;
-border-radius:12px;
-z-index:100;
-box-shadow:0 10px 30px #0004;
-}
+#toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#24153f;color:white;padding:12px 20px;border-radius:12px;z-index:100;box-shadow:0 10px 30px #0004}
 #toast.show{display:block}
 @media(max-width:850px){
 .grid{grid-template-columns:repeat(2,1fr)}
@@ -422,7 +136,7 @@ section{padding:46px 0}
 <a href="#home" class="logo">Bday<span>0.com</span> 🎉</a>
 <div class="links">
 <a href="#offers">Freebies</a>
-<a href="#planner">My Bday Plan</a>
+<a href="#planner">My Birthday Plan</a>
 <a href="#how">How It Works</a>
 <a href="#about">About</a>
 </div>
@@ -433,9 +147,9 @@ section{padding:46px 0}
 
 <div class="hero" id="home">
 <div class="wrap">
-<div class="eyebrow">🎂 YOUR BDAY. ZERO COST. ALL FUN.</div>
-<h1>It's Your Bday.<br><span>Let Everyone Else Treat You!</span></h1>
-<p>Free food. Free drinks. Birthday gifts. Casino perks. Nightlife rewards. Discover birthday treats, find the deals and plan your ultimate Bday.</p>
+<div class="eyebrow">🎂 YOUR BIRTHDAY. ZERO COST. ALL FUN.</div>
+<h1>It's Your Birthday.<br><span>Let Everyone Else Treat You!</span></h1>
+<p>Free food. Free drinks. Birthday gifts. Casino perks. Nightlife rewards. Discover birthday treats, find the deals and plan your ultimate birthday.</p>
 
 <form id="heroSearch" class="search">
 <input id="heroQuery" type="search" placeholder="Search coffee, pancakes, beauty, casinos..." aria-label="Search birthday offers">
@@ -457,12 +171,12 @@ section{padding:46px 0}
 <div class="wrap stats">
 <div class="stat"><strong>$0</strong><span>Website access</span></div>
 <div class="stat"><strong>5 Categories</strong><span>Explore birthday perks</span></div>
-<div class="stat"><strong>My Bday</strong><span>Save your favorites</span></div>
+<div class="stat"><strong>My Birthday</strong><span>Save your favorites</span></div>
 </div>
 
 <section id="offers">
 <div class="wrap">
-<h2>Find Your Bday Freebies 🎁</h2>
+<h2>Find Your Birthday Freebies 🎁</h2>
 <p class="sub">Explore birthday treats, gifts, loyalty rewards, entertainment and special offers.</p>
 
 <div class="notice">
@@ -496,12 +210,12 @@ section{padding:46px 0}
 
 <section id="planner" style="background:#f1ecfa">
 <div class="wrap">
-<h2>🎂 My Bday0 Planner</h2>
+<h2>🎂 My Birthday Planner</h2>
 <p class="sub">Save your favorite birthday offers and create your own birthday checklist.</p>
 
 <div class="two">
 <div class="panel">
-<h3>Plan Your Bday</h3>
+<h3>Plan Your Birthday</h3>
 <div class="field">
 <label for="firstName">Your Name (Optional)</label>
 <input id="firstName" placeholder="Your name">
@@ -519,7 +233,7 @@ section{padding:46px 0}
 </div>
 
 <div class="panel">
-<h3>My Saved Bday Offers <span id="planCount">(0)</span></h3>
+<h3>My Saved Birthday Offers <span id="planCount">(0)</span></h3>
 <div id="planList"></div>
 <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:20px">
 <button class="btn purple small" id="copyPlan">Copy My Plan</button>
@@ -558,7 +272,7 @@ section{padding:46px 0}
 
 <section class="dark" id="about">
 <div class="wrap">
-<h2>One Bday. Tons of Possibilities.</h2>
+<h2>One Birthday. Tons of Possibilities.</h2>
 <p>Bday0.com helps you discover birthday rewards, gifts and experiences without spending hours searching the internet.</p>
 <p>From coffee and pancakes to beauty gifts, entertainment and casino rewards, we make finding birthday perks simple and fun.</p>
 <p><strong>No membership fees to use Bday0.com. No account required. Just birthday opportunities.</strong></p>
@@ -586,11 +300,11 @@ section{padding:46px 0}
 <div class="wrap foot">
 <div>
 <a href="#home" class="logo">Bday<span>0.com</span> 🎉</a>
-<p>Your Bday. Your Freebies. Zero Cost. All Fun!</p>
+<p>Your Birthday. Your Freebies. Zero Cost. All Fun!</p>
 <small>© <span id="year"></span> Bday0.com. All rights reserved.</small>
 </div>
 <div>
-<p><a href="#offers">Find Freebies</a> &nbsp; | &nbsp; <a href="#planner">My Bday Plan</a></p>
+<p><a href="#offers">Find Freebies</a> &nbsp; | &nbsp; <a href="#planner">My Birthday Plan</a></p>
 <small>Independent informational website. Promotions subject to change.</small>
 </div>
 </div>
@@ -798,9 +512,7 @@ details=old.details||{};
 
 function persist(){
 try{
-localStorage.setItem(storageKey,JSON.stringify({
-saved:[...saved],details
-}));
+localStorage.setItem(storageKey,JSON.stringify({saved:[...saved],details}));
 }catch(e){
 toast("Browser storage is unavailable.");
 }
@@ -872,7 +584,7 @@ saved.add(o.id);
 }
 persist();
 render();
-toast(saved.has(o.id)?"Added to your Bday plan":"Removed from your Bday plan");
+toast(saved.has(o.id)?"Added to your birthday plan":"Removed from your birthday plan");
 }
 );
 saveBtn.setAttribute("aria-pressed",saved.has(o.id));
@@ -946,7 +658,7 @@ const name=$("firstName").value.trim()||"My";
 const birthday=$("birthday").value;
 const city=$("city").value.trim();
 
-let text=name+"'s Bday0 Plan\n";
+let text=name+"'s Birthday Plan\n";
 if(birthday)text+="Birthday: "+birthday+"\n";
 if(city)text+="City/ZIP: "+city+"\n";
 text+="\n";
@@ -999,12 +711,12 @@ $("offers").scrollIntoView({behavior:"smooth"});
 
 $("copyPlan").addEventListener("click",async()=>{
 if(!saved.size){
-toast("Save some Bday offers first.");
+toast("Save some birthday offers first.");
 return;
 }
 try{
 await navigator.clipboard.writeText(planText());
-toast("Your Bday plan was copied.");
+toast("Your birthday plan was copied.");
 }catch(e){
 toast("Copy unavailable. Try Print My Plan.");
 }
@@ -1012,7 +724,7 @@ toast("Copy unavailable. Try Print My Plan.");
 
 $("clearPlan").addEventListener("click",()=>{
 if(!saved.size)return;
-if(confirm("Remove all saved Bday offers?")){
+if(confirm("Remove all saved birthday offers?")){
 saved.clear();
 persist();
 render();
@@ -1022,7 +734,7 @@ toast("Your saved offers were cleared.");
 
 $("printPlan").addEventListener("click",()=>{
 if(!saved.size){
-toast("Save some Bday offers first.");
+toast("Save some birthday offers first.");
 return;
 }
 const w=window.open("","_blank");
@@ -1033,7 +745,7 @@ return;
 const pre=w.document.createElement("pre");
 pre.style.cssText="white-space:pre-wrap;font:16px/1.6 Arial,sans-serif;margin:35px";
 pre.textContent=planText();
-w.document.title="My Bday0 Plan";
+w.document.title="My Birthday Plan";
 w.document.body.append(pre);
 w.focus();
 w.print();
