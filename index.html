@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#180d31">
-<meta name="description" content="Birthday0.com helps you discover birthday freebies, free food, drinks, beauty gifts, casino rewards, nightlife offers and more. Your Birthday. Zero Cost. All Fun!">
-<meta name="keywords" content="birthday freebies, free birthday food, birthday gifts, birthday rewards, birthday deals, birthday casino offers, Birthday0">
+<meta name="description" content="Birthday0.com helps you find birthday freebies, free food, birthday gifts, rewards and nearby birthday spots across the United States.">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Birthday0.com | Your Birthday. Zero Cost. All Fun!">
-<meta property="og:description" content="Discover birthday freebies, rewards, gifts, food, drinks and entertainment.">
+<meta property="og:description" content="Find birthday freebies, rewards, gifts and nearby birthday spots.">
 <meta property="og:url" content="https://birthday0.com/">
+<link rel="canonical" href="https://birthday0.com/">
 <title>Birthday0.com | Your Birthday. Zero Cost. All Fun!</title>
 
 <style>
@@ -249,8 +249,6 @@ flex:1;
 .pill{
 display:inline-block;
 align-self:flex-start;
-background:#e9f7ee;
-color:#17603e;
 border-radius:30px;
 font-size:12px;
 font-weight:800;
@@ -334,10 +332,7 @@ justify-content:space-between;
 align-items:center;
 gap:10px;
 }
-.planitem small{
-display:block;
-color:var(--muted);
-}
+.planitem small{display:block;color:var(--muted)}
 .steps{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -392,9 +387,79 @@ z-index:100;
 box-shadow:0 10px 30px #0004;
 }
 #toast.show{display:block}
+
+/* Nationwide local birthday search */
+.local-section{
+background:linear-gradient(180deg,#f3eafa,#faf8ff);
+}
+.local-panel{
+background:white;
+border:1px solid #e6d9f3;
+border-radius:22px;
+padding:30px;
+box-shadow:0 12px 35px #32154d10;
+}
+.local-form{
+display:flex;
+gap:12px;
+align-items:end;
+flex-wrap:wrap;
+margin:20px 0;
+}
+.local-form .field{margin:0;flex:1;min-width:150px}
+.local-form select{
+width:100%;
+border:1px solid #dcd4e8;
+border-radius:10px;
+padding:12px;
+background:white;
+}
+.local-categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+margin-top:24px;
+}
+.local-tile{
+display:block;
+background:#f8f4ff;
+border:1px solid #e6daf5;
+border-radius:14px;
+padding:19px 12px;
+text-align:center;
+text-decoration:none;
+color:var(--purple);
+font-weight:800;
+}
+.local-tile:hover{
+background:#eee1ff;
+border-color:var(--purple);
+}
+.local-tile .emoji{
+display:block;
+font-size:30px;
+margin-bottom:6px;
+}
+.local-tile small{
+display:block;
+font-weight:500;
+color:var(--muted);
+}
+.local-results{
+margin-top:22px;
+border-top:1px solid var(--line);
+padding-top:20px;
+}
+.local-results h3{margin:0 0 8px}
+.local-note{
+font-size:13px;
+color:var(--muted);
+margin-top:14px;
+}
 @media(max-width:850px){
 .grid{grid-template-columns:repeat(2,1fr)}
 .two{grid-template-columns:1fr}
+.local-categories{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){
 nav{flex-direction:column;padding:12px 0;gap:8px}
@@ -409,7 +474,10 @@ nav{flex-direction:column;padding:12px 0;gap:8px}
 .stat strong{font-size:19px}
 .stat span{font-size:11px}
 section{padding:46px 0}
-.panel{padding:19px}
+.panel,.local-panel{padding:19px}
+.local-form{flex-direction:column;align-items:stretch}
+.local-form .field{width:100%}
+.local-categories{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -421,6 +489,7 @@ section{padding:46px 0}
 <a href="#home" class="logo">Birthday<span>0.com</span> 🎉</a>
 <div class="links">
 <a href="#offers">Freebies</a>
+<a href="#nearby">Near Me</a>
 <a href="#planner">My Birthday Plan</a>
 <a href="#how">How It Works</a>
 <a href="#about">About</a>
@@ -449,15 +518,26 @@ section{padding:46px 0}
 <button class="btn" type="submit">Find Freebies →</button>
 </form>
 
-<p class="hero-note">✓ Free to use &nbsp; ✓ No registration here &nbsp; ✓ Official business links</p>
+<p class="hero-note">✓ Free to use &nbsp; ✓ No registration here &nbsp; ✓ Nationwide local search</p>
 </div>
 </div>
 
 <div class="wrap stats">
-<div class="stat"><strong>$0</strong><span>Website access</span></div>
-<div class="stat"><strong>5 Categories</strong><span>Explore birthday perks</span></div>
-<div class="stat"><strong>My Birthday</strong><span>Save your favorites</span></div>
+<div class="stat">
+<strong>$0</strong>
+<span>Website access</span>
 </div>
+<div class="stat">
+<strong>Nationwide</strong>
+<span>Search nearby spots</span>
+</div>
+<div class="stat">
+<strong>My Birthday</strong>
+<span>Save your favorites</span>
+</div>
+</div>
+
+<!-- NATIONAL BIRTHDAY FREEBIES DIRECTORY -->
 
 <section id="offers">
 <div class="wrap">
@@ -484,14 +564,142 @@ section{padding:46px 0}
 <option value="conditional">Birthday Rewards</option>
 <option value="variable">Check Current Offers</option>
 </select>
-<label><input id="savedOnly" type="checkbox"> Saved Only</label>
+<label>
+<input id="savedOnly" type="checkbox">
+Saved Only
+</label>
 <span id="resultCount" style="font-size:13px;color:#666"></span>
 </div>
 
 <div class="grid" id="cards"></div>
-<div id="noResults" class="empty hidden">No matching offers found. Try a different search or category.</div>
+<div id="noResults" class="empty hidden">
+No matching offers found. Try a different search or category.
+</div>
 </div>
 </section>
+
+<!-- NEW NATIONWIDE ZIP CODE SEARCH -->
+
+<section class="local-section" id="nearby">
+<div class="wrap">
+
+<h2>📍 Find Birthday Freebies Near You</h2>
+<p class="sub">Search anywhere in the United States for nearby restaurants, coffee shops, stores, entertainment and birthday opportunities.</p>
+
+<div class="local-panel">
+
+<h3 style="font-size:24px;margin:0">🎂 What's Near Your Birthday?</h3>
+<p style="color:var(--muted)">
+Enter your ZIP code and discover local places to celebrate. No account or registration required.
+</p>
+
+<form id="localSearchForm" class="local-form">
+<div class="field">
+<label for="localZip">Your ZIP Code</label>
+<input
+id="localZip"
+type="text"
+inputmode="numeric"
+autocomplete="postal-code"
+maxlength="5"
+pattern="[0-9]{5}"
+placeholder="Enter 5-digit ZIP code"
+required>
+</div>
+
+<div class="field">
+<label for="localRadius">Search Distance</label>
+<select id="localRadius">
+<option value="5">Within 5 Miles</option>
+<option value="10" selected>Within 10 Miles</option>
+<option value="25">Within 25 Miles</option>
+<option value="50">Within 50 Miles</option>
+</select>
+</div>
+
+<div class="field">
+<label for="localType">What Are You Looking For?</label>
+<select id="localType">
+<option value="birthday freebies">All Birthday Freebies</option>
+<option value="restaurants birthday rewards">Restaurants & Food</option>
+<option value="coffee shops birthday rewards">Coffee & Drinks</option>
+<option value="beauty stores birthday gifts">Beauty & Shopping</option>
+<option value="birthday entertainment deals">Entertainment</option>
+<option value="birthday casino promotions">Casinos & Nightlife</option>
+</select>
+</div>
+
+<button class="btn purple" type="submit">
+Find Local Birthday Spots →
+</button>
+</form>
+
+<div class="local-categories" id="localTiles">
+<a class="local-tile" href="#" data-local="restaurants birthday rewards">
+<span class="emoji">🍔</span>
+Restaurants
+<small>Food & birthday meals</small>
+</a>
+<a class="local-tile" href="#" data-local="coffee shops birthday rewards">
+<span class="emoji">☕</span>
+Coffee & Drinks
+<small>Coffee shops and cafés</small>
+</a>
+<a class="local-tile" href="#" data-local="beauty stores birthday gifts">
+<span class="emoji">💄</span>
+Beauty & Shopping
+<small>Gifts and rewards</small>
+</a>
+<a class="local-tile" href="#" data-local="birthday entertainment deals">
+<span class="emoji">🎬</span>
+Entertainment
+<small>Movies and attractions</small>
+</a>
+<a class="local-tile" href="#" data-local="ice cream shops birthday rewards">
+<span class="emoji">🍦</span>
+Ice Cream
+<small>Sweet birthday treats</small>
+</a>
+<a class="local-tile" href="#" data-local="bakeries birthday specials">
+<span class="emoji">🧁</span>
+Bakeries
+<small>Cakes and desserts</small>
+</a>
+<a class="local-tile" href="#" data-local="birthday casino promotions">
+<span class="emoji">🎰</span>
+Casinos
+<small>Rewards and promotions</small>
+</a>
+<a class="local-tile" href="#" data-local="birthday nightlife deals">
+<span class="emoji">🎉</span>
+Nightlife
+<small>Celebrate your birthday</small>
+</a>
+</div>
+
+<div id="localResults" class="local-results hidden" aria-live="polite">
+<h3 id="localResultTitle">Your Local Birthday Search</h3>
+<p id="localResultDescription"></p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a id="localMapsLink" class="btn purple" href="#" target="_blank" rel="noopener noreferrer">
+View Nearby Businesses on Google Maps ↗
+</a>
+<a id="localGoogleLink" class="btn light" href="#" target="_blank" rel="noopener noreferrer">
+Search Birthday Offers ↗
+</a>
+</div>
+</div>
+
+<p class="local-note">
+<strong>Important:</strong> Local search opens Google Maps or Google Search for businesses near the ZIP code you enter. Google Maps may return locations outside the selected mileage range, so check each result's actual distance. Birthday rewards are not automatically verified or guaranteed. Confirm offers and signup requirements directly with each business.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- PERSONAL BIRTHDAY PLANNER -->
 
 <section id="planner" style="background:#f1ecfa">
 <div class="wrap">
@@ -499,36 +707,50 @@ section{padding:46px 0}
 <p class="sub">Save your favorite birthday offers and create your own birthday checklist.</p>
 
 <div class="two">
+
 <div class="panel">
 <h3>Plan Your Birthday</h3>
+
 <div class="field">
 <label for="firstName">Your Name (Optional)</label>
 <input id="firstName" placeholder="Your name">
 </div>
+
 <div class="field">
 <label for="birthday">Your Birthday (Optional)</label>
 <input id="birthday" type="date">
 </div>
+
 <div class="field">
 <label for="city">Your City or ZIP Code (Optional)</label>
 <input id="city" placeholder="Example: Las Vegas, NV">
 </div>
-<button class="btn purple" id="saveDetails">Save My Details</button>
-<p style="font-size:13px;color:#6a6678">Details stay in this browser. Entering a city does not automatically filter or verify nearby offers.</p>
+
+<button class="btn purple" id="saveDetails" type="button">
+Save My Details
+</button>
+
+<p style="font-size:13px;color:#6a6678">
+Details stay in this browser. The planner's city field is a personal note; use the local search above to explore nearby businesses.
+</p>
 </div>
 
 <div class="panel">
 <h3>My Saved Birthday Offers <span id="planCount">(0)</span></h3>
 <div id="planList"></div>
+
 <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:20px">
-<button class="btn purple small" id="copyPlan">Copy My Plan</button>
-<button class="btn small" id="printPlan">Print My Plan</button>
-<button class="btn light small" id="clearPlan">Clear Saved</button>
+<button class="btn purple small" id="copyPlan" type="button">Copy My Plan</button>
+<button class="btn small" id="printPlan" type="button">Print My Plan</button>
+<button class="btn light small" id="clearPlan" type="button">Clear Saved</button>
 </div>
 </div>
+
 </div>
 </div>
 </section>
+
+<!-- HOW IT WORKS -->
 
 <section id="how">
 <div class="wrap">
@@ -539,21 +761,25 @@ section{padding:46px 0}
 <div class="step">
 <b>01</b>
 <h3>Find Freebies 🎁</h3>
-<p>Explore restaurants, coffee shops, retailers, casinos, entertainment and birthday reward programs.</p>
+<p>Explore birthday rewards from restaurants, coffee shops, retailers, casinos and entertainment businesses.</p>
 </div>
+
 <div class="step">
 <b>02</b>
-<h3>Check the Details 🔎</h3>
-<p>Follow official business links and confirm signup requirements, eligibility, deadlines and participating locations.</p>
+<h3>Search Near You 📍</h3>
+<p>Enter your ZIP code to explore nearby businesses and check their birthday promotions and requirements.</p>
 </div>
+
 <div class="step">
 <b>03</b>
 <h3>Make Your Plan 🎉</h3>
-<p>Save your favorite offers, build your birthday checklist and copy or print your personalized plan.</p>
+<p>Save your favorite directory offers, build your birthday checklist and copy or print your personalized plan.</p>
 </div>
 </div>
 </div>
 </section>
+
+<!-- ABOUT -->
 
 <section class="dark" id="about">
 <div class="wrap">
@@ -565,15 +791,25 @@ section{padding:46px 0}
 </div>
 </section>
 
+<!-- LEGAL -->
+
 <section id="legal">
 <div class="wrap">
 <h2>The Fine Print</h2>
+
 <div class="panel" style="font-size:14px;color:#666">
 <p><strong>Independent Website:</strong> Birthday0.com is an independent informational website. We are not affiliated with, endorsed by or sponsored by the businesses listed unless expressly stated.</p>
+
 <p><strong>Promotions:</strong> Offers can change, expire or be discontinued without notice. Eligibility, purchase requirements, participating locations, age restrictions, enrollment deadlines and membership conditions may apply. A listing does not guarantee a free product or service.</p>
+
+<p><strong>Local Search:</strong> ZIP code search uses links to third-party search engines and mapping services. Birthday0.com does not independently verify business locations, geographic distances or current birthday offers. Selected distance ranges are approximate search preferences, not enforced geographic boundaries.</p>
+
 <p><strong>Casinos and Nightlife:</strong> Casino and alcohol-related promotions may have legal age restrictions, membership requirements and geographic limitations. Casino benefits may depend on qualifying play or membership tier. Birthday0.com does not operate gambling services or sell alcohol.</p>
+
 <p><strong>External Websites:</strong> All third-party websites are independently operated. Birthday0.com is not responsible for their offers, policies, products or services.</p>
-<p><strong>Privacy:</strong> This version does not require user accounts. Optional planner details and saved offers remain in local browser storage and are not submitted to Birthday0.com. External websites and image providers may receive technical connection data.</p>
+
+<p><strong>Privacy:</strong> This version does not require user accounts. Optional planner details and saved offers remain in local browser storage and are not submitted to Birthday0.com. External websites, search providers and image providers may receive information when their services are accessed. ZIP codes and search terms entered into local search are included in the links opened at Google.</p>
+
 <p><strong>Accuracy:</strong> Listings are an informational starter directory, not a continuously verified or automatically updated database. Confirm current promotions directly with each business before traveling or spending money.</p>
 </div>
 </div>
@@ -588,8 +824,13 @@ section{padding:46px 0}
 <p>Your Birthday. Your Freebies. Zero Cost. All Fun!</p>
 <small>© <span id="year"></span> Birthday0.com. All rights reserved.</small>
 </div>
+
 <div>
-<p><a href="#offers">Find Freebies</a> &nbsp; | &nbsp; <a href="#planner">My Birthday Plan</a></p>
+<p>
+<a href="#offers">Find Freebies</a> &nbsp; | &nbsp;
+<a href="#nearby">Near Me</a> &nbsp; | &nbsp;
+<a href="#planner">My Birthday Plan</a>
+</p>
 <small>Independent informational website. Promotions subject to change.</small>
 </div>
 </div>
@@ -599,6 +840,8 @@ section{padding:46px 0}
 
 <script>
 "use strict";
+
+/* NATIONAL BIRTHDAY REWARDS */
 
 const offers=[
 {
@@ -782,6 +1025,8 @@ img:"https://images.unsplash.com/photo-1571266028243-d220c9a3a157?auto=format&fi
 tags:"nightclubs nightlife vip birthday"
 }
 ];
+
+/* EXISTING DIRECTORY AND PLANNER */
 
 const $=id=>document.getElementById(id);
 const storageKey="birthday0_saved_v1";
@@ -1038,8 +1283,82 @@ w.focus();
 w.print();
 });
 
+/* NEW NATIONWIDE ZIP CODE SEARCH */
+
+function validZip(){
+const zip=$("localZip").value.trim();
+if(!/^[0-9]{5}$/.test(zip)){
+toast("Please enter a valid five-digit ZIP code.");
+$("localZip").focus();
+return null;
+}
+return zip;
+}
+
+function buildLocalLinks(category){
+const zip=validZip();
+if(!zip)return;
+
+const radius=$("localRadius").value;
+const query=category||$("localType").value;
+
+const mapsQuery=query+" near "+zip+" within "+radius+" miles";
+const webQuery=query+" "+zip+" birthday free offers";
+
+const mapsURL=
+"https://www.google.com/maps/search/?api=1&query="+
+encodeURIComponent(mapsQuery);
+
+const googleURL=
+"https://www.google.com/search?q="+
+encodeURIComponent(webQuery);
+
+$("localMapsLink").href=mapsURL;
+$("localGoogleLink").href=googleURL;
+
+$("localResultTitle").textContent=
+"Birthday Spots Near ZIP "+zip;
+
+$("localResultDescription").textContent=
+"Explore "+query+" near "+zip+
+". You selected "+radius+
+" miles. Google Maps may show businesses beyond that distance.";
+
+$("localResults").classList.remove("hidden");
+
+if(!$("city").value.trim()){
+$("city").value=zip;
+}
+
+return mapsURL;
+}
+
+$("localSearchForm").addEventListener("submit",e=>{
+e.preventDefault();
+const url=buildLocalLinks();
+if(url){
+$("localResults").scrollIntoView({
+behavior:"smooth",
+block:"nearest"
+});
+}
+});
+
+document.querySelectorAll("[data-local]").forEach(tile=>{
+tile.addEventListener("click",e=>{
+e.preventDefault();
+const url=buildLocalLinks(tile.dataset.local);
+if(url){
+window.open(url,"_blank","noopener,noreferrer");
+}
+});
+});
+
+/* FOOTER AND INITIAL RENDER */
+
 $("year").textContent=new Date().getFullYear();
 render();
+
 </script>
 
 </body>
